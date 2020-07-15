@@ -68,4 +68,12 @@ div.desc {
   text-align: center;
 }
 
+@media (max-width: 768px) { 
+  .align2{
+  text align: center;}
+} 
+@media (min-width: 769px) {
+  .align2{
+  text align: right;}
+} 
 
