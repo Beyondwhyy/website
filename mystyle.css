@@ -68,18 +68,4 @@ div.desc {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .logo2{
-      width:50%;
-      height: auto;}
-  .align2{
-      text-align: center;}
-} 
-@media (min-width: 769px) {
-  .logo2{
-      max-width: 10%;
-      height: auto;}
-  .align2{
-      text-align: right;}
-}
 
