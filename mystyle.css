@@ -75,11 +75,11 @@ div.desc {
       text-align: center;}
 } 
 @media (min-width: 769px) {
-  .logo3{
+  .logo2{
       max-width: 10%;
       min-width: 100px;
       height: auto;}
-  .align3{
+  .align2{
       text-align: right;}
 }
 
