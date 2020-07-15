@@ -70,14 +70,13 @@ div.desc {
 
 @media (max-width: 768px) {
   .logo2{
-      width:250px;}
+      width:400px;}
   .align2{
       text-align: center;}
 } 
 @media (min-width: 769px) {
   .logo2{
       max-width: 10%;
-      min-width: 100px;
       height: auto;}
   .align2{
       text-align: right;}
