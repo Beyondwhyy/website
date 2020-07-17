@@ -1,0 +1,135 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/multivariable_calculus.html">Multivariable Calculus</a><br>
+<b> Next:</b> <a href="../ml_blog/supervised_learning.html">Supervised Learning<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Basic Calculus</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">In calculus, we are dealing with quantities that grow or change and by how much they are changing etc. A mathematical function is made of 2 elements: constants & variables. For example, consider the function: <strong>y = 5x + 3</strong>. In this function 5 and 3 are constants and  <strong>x</strong> and <strong>y</strong> are the variables. Here the variable <strong>y</strong> depends on the variable <strong>x</strong> or in other words <strong>y</strong> is a function of <strong>x</strong> . If <strong>x = 0</strong>, <strong>y = 3</strong> , if <strong>x = 1</strong>, <strong>y = 8</strong>, if <strong>x = 2</strong>, <strong>y = 13</strong> and so on.</p>
+
+	<p class="marg">Now say the quantity <strong>x</strong> is varying by a very small amount <strong>dx</strong> (that’s how we denote small changes in calculus), what would be the corresponding small change in quantity <strong>y</strong>, denoted by <strong>dy</strong>? Only one way to find out.</p>
+
+	<p class="marg" style="text-align: center;"><strong><em>y + dy = 5 (x + dx) +3</em></strong></p>
+	<p class="marg" style="text-align: center;"><strong><em>= 5x + 5dx +3</em></strong></p>
+	<p class="marg" style="text-align: center;"><strong><em>= (5x + 3) + 5dx</em></strong></p>
+	<p class="marg" style="text-align: center;"><strong><em>= y + 5dx</em></strong></p>
+
+	<p class="marg">Comparing both sides of the equation, we get, <strong>dy = 5 dx</strong> i.e. if <strong>x</strong> varies by a tiny amount (say 0.00001), then y would vary by five times as much (0.00005).</p>
+	<p class="marg">Now consider a more practical example; suppose we have a square with length of the side <strong>x</strong>, then its area <strong>y</strong> can be expressed by the function, <strong>y = x²</strong>.</p>
+
+	<br><p><img src="../ml_images/sqr_area.png" class="bigimg"></p><br>
+
+	<p class="marg" style="text-align: center;"><strong><em>y + dy = (x + dx)²</em></strong></p>
+	<p class="marg" style="text-align: center;"><strong><em>= x² + 2x dx + (dx)²</em></strong></p>
+	<p class="marg" style="text-align: center;"><strong><em>= y + 2x dx + (dx)²</em></strong></p>
+
+	<p class="marg">In this case, <strong><em>dy = 2x dx + (dx)²</em></strong>. Remember that <strong><em>dx</em></strong> represented a really small term, therefore <strong><em>(dx)²</em></strong> represents a small fraction of the already small term <strong><em>dx</em></strong>. So the<strong><em>(dx)²</em></strong> term can be neglected as it is insignificant in comparison to other terms in the equation. Therefore,</p><br>
+
+	<p class="marg" style="text-align: center;"><strong><em>dy = y + 2x dx</em></strong></p>
+
+		
+	<p class="marg">In both the examples, if we were to divide both sides of equation by <strong><em>dx</em></strong>, we get the quantity <strong><em>dy/dx</em></strong>, i.e. change in <strong><em>y</em></strong> per change in <strong><em>x</em></strong>. It’s called as the Derivative of <strong><em>y</em></strong> with respect to <strong><em>x</em></strong>. That’s what we are looking for.</p>
+
+	<p class="marg">One way to find the derivative would be to proceed as we did so far, plugging in the <strong><em>x + dx</em></strong> term in the function and obtaining <strong><em>dy</em></strong>. This is generally the more difficult approach and it’s not always possible to find the derivative this way for more complex functions. This is where differentiation comes in.</p>
+
+	<p class="marg">Here are the derivatives of some common terms:</p>
+
+	<br><p><img src="../ml_images/derivatives.png" class="bigimg" width="700px"></p><br>
+
+
+	<p class="marg">These rules will be sufficient to deal with basic algebraic functions for now. So let’s try and find derivatives of our earlier examples by using this method.</p>
+
+	<p class="marg">Example 1: <strong><em>y = 5x + 3</em></strong></p>
+
+	<p><img src="../ml_images/derivative_ex1.png" class="bigimg"></p>
+
+	<p class="marg">Example 2: <strong><em>y = x²</em></strong></p>
+
+	<p><img src="../ml_images/derivative_ex2.png" class="bigimg"></p>
+
+	<p class="marg">Look how much easier that was!</p>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Slope</h2></li></ul>
+
+	<p class="marg">Slope is the steepness of a curve at particular point on the curve or in other words, slope is how fast a function increases/decreases at a particular point. </p>
+
+	<p><img src="../ml_images/slope.png" class="bigimg" width="350px"></p>
+
+	<p class="marg">The straight line shown in the figure above is called the tangent. Tangent at a point on a curve is the straight line  touching the curve at that point and that point only. Hence there can only be one tangent at a point. Mathematically, the slope of a curve at a point is defined as the <i>tan theta</i> of the angle the tangent at the point makes with the positive x-axis.</p>
+
+	<p class="marg">In the figure below, we have shown tangents at several other points. At point B, the tangent is parallel to the x-axis, hence the slope is zero. Tangent at point D is steeper than the tangent at point C, therefore the value of y increases at a faster rate at D than at C, with increase in x. At point A, the slope is negative (since angle is greater than 90º), meaning the value of y decreases with increase in x.</p>
+
+
+	<p class="marg">To find the slope, there is no need to plot the function graphically and draw tangents. The derivative of a function at a point gives its slope at that point. </p>
+
+	<p><img src="../ml_images/derslope.png" class="bigimg" width="300px"></p>
+	
+	<p class="marg">For example, the slope at point (2,14) of the curve shown above can be found as:</p>
+	
+	<p><img src="../ml_images/derslopeex.png" class="bigimg"></p>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Maxima & Minima</h2></li></ul>
+
+	<p class="marg">The largest and the smallest values of a function are called Maximum and Minimum respectively. There can only be one absolute (or global) maximum and one absolute (or global) minimum. Other than that, there are several local maxima and minima (plural), which are the largest/smallest values of the function in a particular portion or range of the function. Collectively all these points are called extremas.</p>
+	<p class="marg">Not all functions have extremas.</p>
+
+	<p><img src="../ml_images/maxmin.png" class="bigimg"></p>
+
+	<p class="marg">The slope or the derivative of the function at extremas is zero. For example, the function <strong><em>y = x3– 12x+ 2x -5</em></strong>  has extremas at <strong><em> x =-2, x =2</em></strong>, which can be found out by the equating the derivative to zero as following:</p>
+
+	<p><img src="../ml_images/maxmin1.png" class="bigimg" width="200px"></p>
+
+	<p class="marg">To determine whether the point is a maximum or minimum, we need to find the second derivative i.e. the derivative of the derivative at the critical points we determined. If the value is positive, that means it is a Minimum, and if it’s negative, then it’s a Maximum. If this value turns out to be zero, then that point is neither a maximum or minimum, it is what is called a <a  target="blank" href="https://en.wikipedia.org/wiki/Inflection_point">point of inflection</a>.</p>
+
+	<p><img src="../ml_images/maxmin2.png" class="bigimg" width="400px"></p>
+
+	<br>
+	<br>
+
+</body>
+</html>
