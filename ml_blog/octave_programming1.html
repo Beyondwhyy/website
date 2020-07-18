@@ -1,0 +1,387 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/matrices.html">Matrices</a><br>
+<b> Next:</b> <a href="../ml_blog/octave_programming2.html">Octave Programming-2<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Octave Programming-1</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">GNU Octave is Open source software featuring a high-level programming language, primarily intended for numerical computations. Octave is one of the major free alternatives to MATLAB.The appropriate version of octave can be downloaded from the link: <a targert="blank" href="https://www.gnu.org/software/octave/download.html">Download</a>. Installation is straightforward.</p>
+
+	<p class="marg">In this section and the next we’ll run you through basic octave commands (Mostly matrices & plotting graphs)</p>
+
+	<br><h3 class="marg3">1. Defining Matrices</h3>
+	<p class="marg3" >Matrices can be defined using square brackets in octave. The elements of a row are separated using space or a comma. The columns are separated using semicolon.</p>
+	<p class="p2">>> A = [1 2; 3 4; 5 6]</p>
+	<p class="p3">A = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1  2<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3  4<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;5  6</p>
+
+	<p class="marg3" >The above shown is a 2×3 matrix and it is denoted by the variable name ‘A’. </p>
+	<p class="p4">#add a semicolon after the command if u dont want to print the output.</p><br>
+
+	<p class="p2">>> B = [1 2 3]</p>
+	<p class="p3">B = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1  2  3</p><br>
+
+	<p class="p2">>> C = [1;2;3]</p>
+	<p class="p3">C = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3</p>
+
+
+
+
+	<br><h3 class="marg3">2. Other ways to declare matrices</h3>
+	<p class="marg3" >There are many other ways to declare matrices and they can be used appropriate according to the situation.</p>
+
+	<p class="p4">#row vector that starts with 1, and each element is incremented by 0.1 till 2</p>
+
+	<p class="p2">>> D = 1:0.1:2</p>
+	<p class="p3">D = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1.0000  1.1000  1.2000  1.3000  1.4000  1.5000  1.6000  1.7000  1.8000 1.9000  2.0000<br>
+	</p>
+
+	<br>
+
+	<p class="p4">#row matrix that starts with 2, incremented by 1 till 6.</p>
+
+	<p class="p2">>> E = 2:6</p>
+	<p class="p3">E = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;2   3   4   5   6</p><br>
+
+	<p class="p4">#Generating a matrix of order 3×4 with all elements 1 </p>
+
+	<p class="p2">>> F = ones(3,4)</p>
+	<p class="p3">F = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1   1   1   1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1   1   1   1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1   1   1   1</p><br>
+
+	<p class="p4">#Multiplying a matrix by a scalar (a number)</p>
+
+	<p class="p2">>> G = 1.4 * B</p>
+	<p class="p3">G = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1.4000   2.8000   4.2000</p><br>
+
+	<p class="p4">#Generating a random matrix of order 2×3 </p>
+
+	<p class="p2">>> H = rand(2,3)</p>
+	<p class="p3">H = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;0.72340   0.94194   0.97331<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0.42416   0.50179   0.19105</p><br>
+
+	<p class="p4">#Generating an identity matrix of order 5×5 </p>
+
+	<p class="p2">>>I = eye(5)</p>
+	<p class="p3">I = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;Diagonal Matrix<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1  0  0  0  0<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0  1  0  0  0<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0  0  1  0  0<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0  0  0  1  0<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0  0  0  0  1</p><br>
+
+	<h3 class="marg3">3. Size of a Matrix</h3>
+
+	<p class="p2">>> size(A)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;3  2</p>
+
+	<p class="marg3" >This command is used to obtain the size of a matrix. The output itself is 1×2 matrix with the no of rows and the no of columns displayed.</p><br>
+
+	<p class="p4">#Obtain the no of rows of a matrix </p>
+
+	<p class="p2">>> size(A,1)</p>
+	<p class="p3">ans = 3</p><br>
+
+	<p class="p4">#Obtain the no of columns of a matrix </p>
+
+	<p class="p2">>> size(A,2)</p>
+	<p class="p3">ans = 2</p><br>
+
+	<p class="p4">#length of the longer dimension of a matrix </p>
+
+	<p class="p2">>> length(A)</p>
+	<p class="p3">ans = 3</p><br>
+
+
+
+	<h3 class="marg3">4. Elements of a matrix</h3>
+
+	<p class="p4">#Obtain the element (3,2) of a matrix (if it exists) </p>
+
+	<p class="p2">>> A(3,2)</p>
+	<p class="p3">ans = 6</p><br>
+
+	<p class="p4">#Obtain all elements of 2nd row</p>
+
+	<p class="p2">>> A(2,:)</p>
+	<p class="p3">ans = <br>
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;3  4</p><br>
+
+	<p class="p4">#Obtain all elements of 1st column </p>
+
+	<p class="p2">>> A(:,1)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;5</p><br>
+
+	<p class="p4">#Obtain all elements of 1st & 3rd row</p>
+
+	<p class="p2">>> A([1,3],:)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1   2<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;5   6</p><br>
+
+	<h3 class="marg3">5. Elements of a matrix</h3>
+
+	<p class="p4">#replace element (3,2) with 1</p>
+
+	<p class="p2">>> A(3,2) = 1</p>
+	<p class="p3">A = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1   2<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3	4<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;5	1</p><br>
+
+	<p class="p4">#replace all elements of 2nd column by new elements</p>
+
+	<p class="p2">>> A(:,2) = [1;3;4]</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1   1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3   3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;5   4</p><br>
+
+
+	<h3 class="marg3">6. Matrix operations</h3>
+
+	<p class="p4">#Matrix Multiplication</p>
+
+	<p class="p2">>> J = B*A</p>
+	<p class="p3">J = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;22  19</p>
+
+	<p class="marg3">Remember that matrix multiplication is only possible when the no of columns of the first matrix is equal to the no of rows of the second matrix.</p><br>
+
+	<p class="p4">#Element wise Multiplication</p>
+
+	<p class="p2">>> K = G.*B</p>
+	<p class="p3">K = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1.4000  5.6000  12.6000</p><br>
+
+	<p class="marg3">In element wise operations, each element of a matrix is operated with the corresponding element of the second matrix of same order.</p><br>
+
+	<p class="p4">#Matrix Addition</p>
+
+	<p class="p2">>> L=A+A</p>
+	<p class="p3">L = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;2   2<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;6   6<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;10  8</p><br>
+
+	<p class="p4">#transpose of a matrix</p>
+
+	<p class="p2">>> M = A’</p>
+	<p class="p3">M = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1   3   5<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1   3   4</p><br>
+
+	<p class="p4">#returns 1/0 (true/false) by checking the condition for each element</p>
+
+	<p class="p2">>> A<3</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1   1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0   0<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0   0</p><br>
+
+	<p class="p4">#returns max value in each column</p>
+
+	<p class="p2">>> max(A)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;5   4</p><br>
+
+	<p class="p4">#returns max value in each row</p>
+
+	<p class="p2">>> max(A,[],2)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;2</p><br>
+
+	<p class="p4">#puts all elements into a column vector</p>
+
+	<p class="p2">>> A(:)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;5<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;4</p><br>
+
+	<p class="p4">#concatenate columns of two matrices of same order</p>
+
+	<p class="p2">>> [A,A]</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1  1  1  1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3  3  3  3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;5  4  5  4</p><br>
+
+	<p class="p4">#concatenate rows of two matrices of same order</p>
+
+	<p class="p2">>> [L;L]</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1  3  5<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1  3  4<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1  3  5<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1  3  4</p><br>
+
+	<p class="p4">#column wise sum of elements of a matrix</p>
+
+	<p class="p2">>> sum(A)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;9   8</p><br>
+
+	<p class="p4">#row wise sum of elements of a matrix</p>
+
+	<p class="p2">>> sum(A,2)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;6<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;9</p><br>
+
+	<p class="p4">#column wise product of elements of a matrix</p>
+
+	<p class="p2">>> prod(A)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;15   12</p><br>
+
+	<p class="p4">#row wise product of elements of a matrix</p>
+
+	<p class="p2">>> prod(A,2)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;9<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;20</p><br>
+
+	<p class="p4">#round down each element of a matrix</p>
+
+	<p class="p2">>> floor(G)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;1  2  4</p><br>
+
+	<p class="p4">#round up each element of a matrix</p>
+
+	<p class="p2">>> ceil(G)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;2  3  5</p><br>
+
+	<p class="p4">#flip the rows vertically</p>
+
+	<p class="p2">>> flipud(A)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;5   4<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3   3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1   1</p><br>
+
+	<p class="p4">#inverse of a matrix (including singular matrices)</p>
+
+	<p class="p2">>> pinv(A)</p>
+	<p class="p3">ans = <br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;-0.40000  -1.20000   1.00000<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;0.50000  1.50000   -1.00000</p><br>
+
+	<h3 class="marg3">7. Plot matrix as Colors</h3>
+	<p class="p2">>> N = [1 2; 3 7; 10 5];</p>
+	<p class="p2">>> imagesc(N)</p>
+	<p class="p2">>> colorbar</p>
+	<p class="p4">#scale of colors used</p>
+
+	<p><img src="../ml_images/oct1.png" class="bigimg" border="1px" width="400px"></p><br>
+
+	<br>
+	<br>
+
+</body>
+</html>
