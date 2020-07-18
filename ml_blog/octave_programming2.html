@@ -1,0 +1,210 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/octave_programming1">Octave Programming-1</a><br>
+<b> Next:</b> <a href="../ml_blog/linear_regression1.html">Linear Regression-1<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Octave Programming-2</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">In this article, we’ll look at some plotting functions in octave and some other useful commands in octave..</p>
+
+	<br><h3 class="marg3">1. Plotting graphs</h3>
+	<p class="marg3" >Before plotting 2-d graphs in octave, you need to define the x-axis and a mathematical relation connecting x and y values. For example</p>
+
+	<p class="p2">>>x = -10:0.1:10;</p>
+	<p class="p2">>>y = x.^3 -7;</p>
+
+	<p class="marg3" >In this example, the graph will be visible from x= -10 to x= 10 and y is calculated for x= -10, -9.9, -9.8…..9.8, 9.9, 10 i.e. in steps of 0.1. If you increase the value of steps from 0.1 to say 1 the graph will be blockier.</p><br>
+
+	<p class="p4">#plot function (y vs x)</p>
+	<p class="p3">>> plot(x,y);<br>
+	<p><img src="../ml_images/oct2.png" class="bigimg" border="1px" width="400px"></p><br>
+
+	<p class="p4">#plot in color, b,r,k,g stands for blue, red, black, green </p>
+	<p class="p3">>> plot(x,y,’g’);<br>
+	<p><img src="../ml_images/oct3.png" class="bigimg" border="1px" width="400px"></p><br>
+
+
+	<p class="p4">#Give label to x-axis and y-axis</p>
+	<p class="p3">>> xlabel(‘time’)</p>
+	<p class="p3">>> ylabel(‘function’)</p>
+	<p class="p3">>> title(‘plot name’)</p><br>
+	<p><img src="../ml_images/oct4.png" class="bigimg" border="1px" width="400px"></p><br>
+
+
+
+	<br><h3 class="marg3">2. Plotting Multiple plots in the same graph</h3>
+
+	<p class="p2">>> plot(x,y,’r’);</p>
+	<p class="p2">>> hold on;</p>
+	<p class="p2">>> plot(x,1000.*sin(x),’b’);</p>
+	<p class="p2">>> hold on;</p>
+	<p class="p2">>> plot(x,1000.*cos(x),’y’);</p><br>
+	<p><img src="../ml_images/oct5.png" class="bigimg" border="1px" width="400px"></p><br>
+
+	<p class="marg3" >“Hold on” command can be used to plot a graph without removing the existing one.</p><br>
+
+	<p class="p4">#close  a plot</p>
+	<p class="p3">>> close</p>
+
+
+
+	<br><h3 class="marg3">3. Subplots</h3>
+
+	<p class="marg3" >A graph can be divided into multiple areas and different functions can be plotted</p>
+	<p class="p4">#dividing plot in 2×2 area. 3rd parameter to refer each subplot (as 1,2,3,4)</p>
+
+	<p class="p2">>> subplot(2,2,1);</p>
+	<p class="p2">>> plot(x,sin(x));</p>
+	<p class="p2">>> subplot(2,2,2);</p>
+	<p class="p2">>> plot(x,cos(x));</p>
+	<p class="p2">>> subplot(2,2,3);</p>
+	<p class="p2">>> plot(x,y);</p>
+	<p class="p2">>> subplot(2,2,4);</p>
+	<p class="p2">>> plot(x,x.*sin(x));</p><br>
+	<p><img src="../ml_images/oct6.png" class="bigimg" border="1px" width="400px"></p><br>
+
+	
+	<br><h3 class="marg3">4. Loops</h3>
+
+	<p class="p4">#for loop</p>
+
+	<p class="p2">>> for i=1:10,</p>
+	<p class="p2">v(i) = i^2;</p>
+	<p class="p2">end;</p>
+	<p class="p2">>> v</p>
+
+	<p class="p3">v =<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1   4   9   16   25   36   49   64   81   100</p><br>
+
+
+<p class="p4">#while loop</p>
+
+	<p class="p2">>>i =1;</p>
+	<p class="p2">>> while i<=10,</p>
+	<p class="p2">v(i)= i+3;</p>
+	<p class="p2">i++;</p>
+	<p class="p2">end;</p>
+	<p class="p2">>>v</p>
+
+	<p class="p3">v =<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4   5   6   7   8   9   10   11   12   13</p>
+
+
+<br><h3 class="marg3">5. If else</h3>
+
+	<p class="p2">>> if i==1,</p>
+	<p class="p2">disp(‘1’);</p>
+	<p class="p2">elseif i==2,</p>
+	<p class="p2">disp(‘2’);</p>
+	<p class="p2">else</p>
+	<p class="p2">disp(‘3’);</p>
+	<p class="p2">end;</p><br>
+
+	<p class="p3">>> 3<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;ans = 3</p>
+
+<br><h3 class="marg3">6. Files</h3>
+
+	<p class="p4">#Current directory</p>
+
+	<p class="p2">>> pwd</p>
+	<p class="p3">ans = C:\…..</p><br>
+
+	<p class="p4">#Change directory</p>
+	<p class="p2">cd ‘C:\…’</p><br>
+
+	<p class="p4">#List of all the files in current directory</p>
+	<p class="p2">>> ls</p><br>
+
+	<p class="p4">#load a file</p>
+	<p class="p2">>> load file.txt</p><br>
+
+	<p class="p4">#list of all the variables currently used</p>
+	<p class="p2">>> who</p><br>
+
+	<p class="p4">#clear a particular variable (x in this case)</p>
+	<p class="p2">>> clear x</p><br>
+
+
+<br><h3 class="marg3">7. Defining a function</h3>
+
+	<p class="marg3">Functions can be defined directly on the command line or saved in external files with extension .m</p>
+
+	<p class="p2">>> function [y1,y2] = squareandcube(x)</p>
+	<p class="p2">y1 = x^2;</p>
+	<p class="p2">y2 = x^3;</p>
+	<p class="p2">end;</p><br>
+
+	<p class="marg3">The above function takes in one parameter x and returns two parameters y1 and y2. </p>
+	<p class="marg3">This function can be called in the following manner:</p>
+
+	<p class="p2">>>[a,b] = squareandcube(3)</p>
+
+	<p class="p2">>>a</p>
+	<p class="p3">a = 9</p>
+
+	<p class="p2">>>b</p>
+	<p class="p3">b = 27</p><br>
+
+	<p class="marg3">When saving a function as a separate file, make sure to change to the or right directory where the file exists.</p>
+	<p class="marg3">We have just introduced the basics of octave in the previous and this article, enough to get started. But if you wish to learn further you can always refer the octave documentation:<a target="blank" href="https://octave.sourceforge.io/docs.php">Link</a></p>
+
+	<p class="marg3">There is no need to by heart these commands, you just need to be familiar. When in doubt you can always google or use the help command  to know about any function. For example to get info about the ‘rand’ function, you just need to use this command:</p>
+
+	<p class="p2">>> help rand </p>
+
+	<p class="marg"> Here's a Matlab/Octave cheatsheet: <a target="blank" href="http://web.mit.edu/18.06/www/Spring09/matlab-cheatsheet.pdf">matlab_cheatsheet_pdf</a></p>
+
+	<p><img src="../ml_images/oct7.png" class="bigimg" border="1px"></p><br>
+
+
+	<br>
+	<br>
+
+</body>
+</html>
