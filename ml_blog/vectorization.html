@@ -1,0 +1,141 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/linear_regression2.html">Linear Regression-2</a><br>
+<b> Next:</b> <a href="../ml_blog/linear_regression3.html">Linear Regression-3<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Vectorization</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">Speed and Efficiency is of the essence in Machine Learning. A good algorithm should not only provide accurate results, but also be fast in doing so. So a lot of research goes on in that area and as a result, data scientists have found that the computation is more efficient in the form of vectors (matrices).</p>
+
+	<p class="marg">For example, the hypothesis function in linear regression is given by,</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression17.png" width="400px" class="bigimg"></p>
+	<br>
+
+
+	<p class="marg">Suppose we need to calculate the output for one example, given the values of n input features and n parameters. The obvious way to implement such a function would be to create a for loop as shown below.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression18.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">While this implementation maybe fine for a smaller values of n, this simply isn’t efficient for larger values of n. Instead, by expressing the inputs and the inputs as 2 vectors (matrices), the implementation becomes way easier and more efficient.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression19.png" width="210px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Generally, for training data with multiple features and training examples, the matrices can be formed as shown:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression20.png" width="400px" class="bigimg"></p>
+	<br>
+
+	
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Hypothesis function (Vectorized)</h2></li></ul>
+	
+	<p class="marg">The Hypothesis function in the vectorized form is given by:.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression23.png" width="120px" class="bigimg"></p>
+	<br>
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Cost function (Vectorized)</h2></li></ul>
+	
+	<p class="marg">The cost function in linear regression is given by:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression5.png" width="350px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">In vectorized form, this equation corresponds to:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression24.png" width="300px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Squaring in algebra doesn’t correspond to squaring in matrix, so to get the squared value, the vector/matrix (Xθ-Y) is multiplied with its transpose. You can try it out with a random column matrix, as shown below.</p>
+
+	<br>
+	<p><img src="../ml_images/matrcost.png" width="370px" class="bigimg"></p>
+	<br>
+
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Gradient descent (Vectorized)</h2></li></ul>
+	
+	<p class="marg">The update rule for the parameters using Gradient descent method is given by:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression29-1.png" width="350px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">In vectorized form, this equation corresponds to:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression25.png" width="270px" class="bigimg"></p>
+	<br>
+	
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Normal Equation (Vectorized)</h2></li></ul>
+	
+	<p class="marg">In normal equation, we find the partial derivative of the cost function with respect to the parameters and equate it to zero.</p>
+
+	<br>
+	<p><img src="../ml_images/normeq1.png" width="500px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">The complexity in calculating inverse of a matrix increases as its order increases, hence this method is not suitable for large no. of input features.</p>
+	
+<br>
+<br>
+
+</body>
+</html>
