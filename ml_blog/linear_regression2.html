@@ -1,0 +1,133 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/linear_regression1.html">Linear Regression-1</a><br>
+<b> Next:</b> <a href="../ml_blog/vectorization.html">Vectorization<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Linear Regression-2</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">In the last section we learnt about cost function, which is essentially an error term denoting how far the hypothesis function is from what it should be. Hence our goal is to basically minimize the error i.e. the cost function and find the parameters corresponding to minimum cost function.</p>
+	
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Gradient Descent</h2></li></ul>
+	
+	<p class="marg">Gradient descent is one of the most popular and efficient ways to minimize the cost function. For now forget about the formula for the cost function, just consider it as a function of the parameters <strong>θ<sub>0</sub>, θ<sub>1</sub></strong>.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression7.png" width="500px" class="bigimg"></p>
+	<br>
+
+
+	<p class="marg">If this were the plot of the cost function with respect to the parameters <strong>θ<sub>0</sub>, θ<sub>1</sub></strong>, then our aim is to find the value of the parameters corresponding to the lowest point on the graph, marked by X. In gradient descent, what we do is, start at a random point, then take a small step in the direction of the steepest downhill. As we continue, we will inevitably end up at the minimum point.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression8.png" width="500px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Here’s how the gradient descent is implemented mathematically:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression10.png" width="300px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">To get an intuitive understanding of this formula, consider the variation of the cost function with respect to a single parameter (say θ<sub>1</sub>), as shown below.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression11.png" width="300px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">If we start at point A, the value of the parameter θ1 decreases, as both the slope at the point ∂ J(θ1 )/∂θ1 and the learning rate α are positive quantities. Finally as θ1 reaches point C, its value remains constant, as the slope at the point is zero. Instead if we start at point B, the value of the parameter θ1 increases till it reaches point C, as the slope at the point ∂ J(θ1 )/∂θ1 is a negative quantity.</p>
+
+
+	<p class="marg">Now we can discuss the importance of the learning rate α. Common sense says it’s a good idea to make the learning rate as big as possible, that way the gradient descent will be faster, hence saving time. This is kinda true, but there is a problem with making the learning rate very large, we might overshoot the target and may not reach the minimum at all. In the figure shown below, the parameter decreases from point A, but overshoots and reaches point B. Then it increases to point D and so on. So instead of converging, the cost function is actually diverging due to the large learning rate.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression12.png" width="300px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">So the best option is to use a large value of α, but not too large at the same time. We might have to experiment with different values to get best results.</p>
+
+	<p class="marg">This is how the gradient descent is implemented for both parameters:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression13.png" width="300px" class="bigimg"></p>
+	<br>
+	<p class="marg">Notice how we stored the updated the parameters to 2 other variables temp0 and temp1 before assigning them to the parameters θ0 and θ1. This is to ensure that both parameters are updated simultaneously. Otherwise one parameter is updated first, then the other parameter is calculated using the updated first parameter. This sort of works, but we might get some weird behavior, so it is not the common practice.</p>
+
+	<p class="marg">If we substitute the equation for the cost function, we can get the parameter update rule as following: </p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression27-2.png" width="700px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Generally,</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression29-1.png" width="400px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">(Remember x0 =1)</p>
+
+	<p class="marg">Please re read Basic Calculus & Multi variable calculus if you are unsure about the derivations.</p><br>
+
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Normal Equation</h2></li></ul>
+	<p class="marg">When dealing with data that has smaller no. of features, there is a faster alternative to the gradient descent called normal equation. In normal equation, the optimum values of the parameters are solved for analytically. The  partial derivative of the cost function with respect to each parameter is computed and it is set to zero, to obtain the optimum values of the parameters.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression32.png" width="150px" class="bigimg"></p>
+	<br>
+
+
+	<p class="marg">All this may seem a little too complex at this point, but things will get a lot easier as we go on. </p>
+
+	
+<br>
+<br>
+
+</body>
+</html>
