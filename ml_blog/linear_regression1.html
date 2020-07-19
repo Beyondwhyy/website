@@ -1,0 +1,119 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/octave_programming2.html">Octave Programming-2</a><br>
+<b> Next:</b> <a href="../ml_blog/linear_regression2.html">Linear Regression-2<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Linear Regression-1</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">So far we have learnt that Regression methods are used in problems where we want to predict a real numerical value using the training data. The first algorithm we are looking into is called the linear regression. For this, the example we are going to be using is that of Housing prices.</p>
+	
+	<p class="marg">Here is the training data for our example. Our goal is to predict or estimate the cost of a house for inputs not in the training data (say 1800 ft² living area & 2 rooms).</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression1.png" width="700px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">First let’s look at some notations:</p>
+	<p class="marg3"><ol>
+ 	 	<li>No. of training examples is denoted by small letter <strong>m</strong>. In this example, <strong>m</strong> is equal to 5. It can be a 100 examples to a 100 thousand examples, depending on the nature of the problem.</li>
+  		<li>No. of input features is denoted by small letter <strong>n</strong>. In this example, <strong>n</strong> is equal to 2 (living area and no. of  rooms). Again, the no. of input features depends on the nature of problem and how we choose to deal with it.</li>
+  		<li>The input features are denoted as <strong>x<sub>1</sub>, x<sub>2</sub></strong>  etc.</li>
+  		<li>The output feature is denoted by small letter <strong>y</strong>.</li>
+  		<li>ith training example is denoted as (<strong>x<sub>1</sub><sup>i</sup>, x<sub>2</sub><sup>i</sup> ,y<sup>i</sup></strong>). For instance, the 4th training example in our training data is (852, 2, 178).</li>
+	</ol></p>
+	<br>
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Hypothesis</h2></li></ul>
+	<p class="marg">As mentioned many times previously (sorry about that), the goal of supervised learning is to find a mathematical relation/ function between input and output from training data and use it to find output for other inputs. That mathematical function/relation is called the hypothesis function, denoted by <strong>h(x)</strong>.</p>
+	<p class="marg">In case of the Linear regression algorithm, the hypothesis function is of the form:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression3.png" width="400px" class="bigimg"></p>
+	<br>
+
+
+	<p class="marg">Where <strong>θ<sub>0</sub>, θ<sub>1</sub>, θ<sub>3</sub>,….θ<sub>n</sub></strong> are real no.’s, they are called parameters or weightages. There will be <strong>n+1</strong> such  parameters for an <strong>n</strong> input feature data set, but for convenience we are going to add an extra input feature <strong>x<sub>0</sub> = 1</strong>.
+
+	<p class="marg">And for the ease of understanding, we are going to consider just one input feature (Living area) from here on. Therefore the corresponding hypothesis function is given by:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression2.png" width="230px" class="bigimg"></p>
+	<br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Cost Function</h2></li></ul>
+	<p class="marg">So how do we obtain the hypothesis using from the training data? The idea is to start with some random values of parameters and generate a hypothesis function, then the training data is input one example at a time and the output the hypothesis function produces is compared with the real output from the data. In the process, the values of the parameters are modified so as to obtain the most suited hypothesis function.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression4.png" width="800px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Now the question is, how do we compare the output from the hypothesis function and the real output? For that, we need to use the cost function. Cost function <strong>J</strong> is defined as:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression5.png" width="300px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">For those of you not used to this kind of formula in math, this may seem a little complex. And at least some of you might be thinking why can’t the cost function be something simpler, maybe like:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression6.png" width="250px" class="bigimg"></p>
+	<br>
+	
+	<p class="marg">It’s a very valid question and something many may not know. If the cost function was as shown above, then as we try to minimize it, we would be making the whole term more and more negative, which makes no sense. Squaring ensures that the difference is always positive, and therefore by minimizing, we are aiming for a positive value closer to zero, if not zero exactly. </p>
+
+	<p class="marg">The whole function is divided by <strong>m</strong> so that we get the average error instead of total error. Also we divide by 2, in order to make calculations easier as we take the derivative later on.</p>
+
+	<p class="marg">We don’t want to cram with too much math and notation all at once, so we have broken this discussion into several sections. How the algorithm goes about minimizing the cost function and so on is discussed in the next section. You might want to re read this section before going into the next one.</p>
+
+
+<br>
+<br>
+
+</body>
+</html>
