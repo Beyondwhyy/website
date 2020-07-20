@@ -1,0 +1,112 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/vectorization.html">Vectorization</a><br>
+<b> Next:</b> <a href="../ml_blog/linear_regression_gradientdescent.html">Linear Regression Example (Gradient descent)<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Linear Regression-3</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">Before we start with the programming part, we will discuss some extra details regarding linear regression.</p>
+	<br>
+	
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Parameter Initialization</h2></li></ul>
+	
+	<p class="marg">Earlier we said that gradient descent is carried out by initializing the parameters randomly. This is not entirely true, how we initialize the parameter does have an effect on what parameters we finally end up with after minimizing the cost function.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression26.png" width="500px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Almost all functions have local minimums i.e. points where the the slope or derivative is zero. But there is only one absolute minimum point (the lowest point on the graph). By carrying out the gradient descent, we are ideally aiming to get the parameter values corresponding to absolute minimum.</p>
+
+	<p class="marg">In the graph shown above, if we initialize the parameters to point A, we reach the absolute minimum point on performing the gradient descent. But instead if we chose to initialize the parameters to a different point B, we would not reach the absolute minimum point, we would only reach a local minimum. So where you start can determine which minimum you end up.</p><br>
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Feature Scaling</h2></li></ul>
+	
+	<p class="marg">When you have multiple features in your problem, it is very handy if those features have a similar scale. For example, in our housing price problem, the first feature (living area) had values ranging from 0 to 2100 roughly and the second feature (no. of rooms) had values ranging from 1 to 5. The range of values in both features are very dissimilar. If you plot θ1 vs θ2, you can see that the graph is very elongated as shown in the first figure. The problem in such a case is that it would take a longer time to reach the minimum value. Now if you where to scale the features to almost a similar range, the plot would become more concentric, more circle like, making it easier to reach the minimum value.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression27.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">One common method to scale features is using Mean Normalization:</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression28.png" width="220px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Here’s our training data after mean normalization.</p>
+
+
+	<br>
+	<p><img src="../ml_images/linear_regression29.png" width="350px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">There are other ways to do feature scaling, but this is sort of the easiest way. Also, there is absolutely no compulsion to do feature scaling, it’s more of a practical trick than anything.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression24.png" width="300px" class="bigimg"></p>
+	<br>
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Polynomial Regression</h2></li></ul>
+	
+	<p class="marg">By nature of certain problems, the linear model may not be adequate. At other times, we may want to create new features out of existing features. For example, if radius was a feature of our problem, we may feel that area given by pi into radius square is a more appropriate feature. In all such cases, the polynomial model is more useful, but we can convert them to linear regression problems, by assigning the polynomial variables to new linear variable.</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression30.png" width="400px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Feature scaling becomes even more important in this case.</p>
+
+	
+<br>
+<br>
+
+</body>
+</html>
