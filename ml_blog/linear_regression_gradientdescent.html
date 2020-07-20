@@ -1,0 +1,139 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/linear_regression3.html">Linear Regression-3</a><br>
+<b> Next:</b> <a href="../ml_blog/linear_regression_normalequation.html">Linear Regression Example(Normal equation)<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Linear Regression Example(Gradient Descent)</b></p></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">Now that you are familiar with the basics of octave programming and the theory behind linear regression, it’s time for the real deal. In this section, we will try to implement a very simple example of linear regression (using gradient descent).</p>
+
+	<p class="marg">For this example, we will try to predict the IQ of a person based on his age. The data set we are using can be downloaded here:<a href="https://beyondwhy.site/agevsiq.txt"> agevsiq</a>.</p><br>
+
+	<p class="marg">Before anything make sure you are in the right directory to import the text file, otherwise change the directory using the <strong>cd</strong> command.</p>
+
+	<p class="p2">>> data = load('agevsiq.txt'); <span class="p4"> #load the data text file</p>
+	<p class="p2">>> x = data(:,1); <span class="p4"> #store the age values as matrix x</p>
+	<p class="p2">y = data(:,2); <span class="p4"> #store the age values as matrix x</p>
+	<p class="p2">>> plot(x,y,'rx','MarkerSize',10); <span class="p4"> #mark the values on a graph with X's</p>
+	<p class="p2">>> hold on; <span class="p4"> </p>
+	<p class="p2">>> xlabel('Age'); <span class="p4"> </p>
+	<p class="p2">>> ylabel('IQ'); <span class="p4"> </p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression_gd3.png" width="559px" class="bigimg"></p>
+	<br>
+
+	<p class="p2">>> function J = findCost(X,y,theta) <span class="p4"> #declare the cost function</p>
+	<p class="p2">J = 0; <span class="p4"> #initialize cost as zero</p>
+	<p class="p2">m = length(X); <span class="p4"> </p>
+	<p class="p2">htheta = X* theta; <span class="p4"> #Hypothesis function X*theta</p>
+	<p class="p2">error = htheta -y; <span class="p4"> </p>
+	<p class="p2">squared_error = error'*error; <span class="p4"> </p>
+	<p class="p2">average_sq_error = squared_error/m; <span class="p4"> </p>
+	<p class="p2">J = average_sq_error/2; <span class="p4"> #Cost value J</p>
+	<p class="p2">end; <span class="p4"> </p><br>
+	
+
+	<p class="p2">>> theta = zeros(2, 1); <span class="p4"> #initialize theta as 0,0 or any other values</p>
+	<p class="p2">>> iterations = 15000; <span class="p4"> #a random large no</p>
+	<p class="p2">>> alpha = 0.001; <span class="p4"> #learning rate</p>
+	<p class="p2">>> J_values = zeros(iterations, 1); <span class="p4"> #Initialize the cost values before iteration</p>
+
+	<p class="p4">#plot between cost values and no of iterations is helpful to check if the function is converging to a minimum</p><br>
+	
+
+	<p class="p2">>> function [theta,J_values] = gradientDescent(X, y, theta, alpha, num_iters <span class="p4"> #Declare the gradient descent function</p>
+	<p class="p2">for i = 1:num_iters <span class="p4"> #Loop to iterate till cost function minimizes</p>
+	<p class="p2">m = length(X); <span class="p4"> </p>
+	<p class="p2">htheta = X* theta; <span class="p4"> #Hypothesis function</p>
+	<p class="p2">error = htheta -y; <span class="p4"> </p>
+	<p class="p2">theta = theta - ((alpha/m) * (X'*error)); <span class="p4"> #gradient descent vector implementation</p>
+	<p class="p2">J_values(i) = findCost(X, y, theta); <span class="p4"> #Cost value at an iteration</p>
+	<p class="p2">end; <span class="p4"> </p>
+	<p class="p2">end; <span class="p4"> </p><br>
+
+
+	<p class="p2">>> [theta,J_values] = gradientDescent(X, y, theta, alpha, iterations); <span class="p4"> #calling the gradient descent function</p><br>
+	<p class="p2">>> theta <span class="p4"> #theta values corresponding to minimum cost</p>
+	<p class="p2">end; <span class="p4"> </p>
+	<p class="p3">theta = <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;106.10373<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;-0.92372</p><br>
+
+	<p class="p2">>> plot(X(:,2), X*theta, '-') <span class="p4"> #plot of the predicted hypothesis function</p>
+	<p class="p2">>> legend('Training data', 'Linear regression') <span class="p4"> </p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression_gd1.png" width="559px" class="bigimg"></p>
+	<br>
+
+	<p class="p2">>> predict = [1, 35] *theta <span class="p4"> #Predicting the IQ of a 35 year old person</p>
+	<p class="p3">predict = 73.774 </p>	<br>
+
+	<p class="p2">>> hold on; <span class="p4"> </p>
+	<p class="p2">>> plot(35,predict,'bx','MarkerSize',20); <span class="p4"> #Mark the predicted IQ on the graph</p>
+
+   	<br>
+	<p><img src="../ml_images/linear_regression_gd2.png" width="559px" class="bigimg"></p>
+	<br>
+
+	<p class="p2">>> t= 1:1:iterations; <span class="p4"> </p>
+	<p class="p2">>> plot(t,J_values(t)); <span class="p4"> </p>
+	<p class="p2">>> xlabel('no of iterations'); <span class="p4"> </p>
+	<p class="p2">>> ylabel('Cost value'); <span class="p4"> </p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression_gd4.png" width="559px" class="bigimg"></p>
+	
+
+	
+<br>
+<br>
+
+</body>
+</html>
