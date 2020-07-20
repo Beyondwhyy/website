@@ -1,0 +1,104 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/linear_regression_gradientdescent.html">Linear Regression Example (Gradient Descent)</a><br>
+<b> Next:</b> <a href="../ml_blog/logistic_regression1.html">Logistic Regression-1<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Linear Regression Example (Normal equation)</b></p></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">Now let’s to implement the same example from last section using the normal equation method. If you remember, in normal equation method we are directly calculating the values of theta corresponding to minimum of the cost function.</p>
+
+	<p class="marg">Download the data set:<a href="https://beyondwhy.site/agevsiq.txt"> agevsiq</a>.</p><br>
+
+	<p class="p2">>> data = load('agevsiq.txt'); <span class="p4"> #load the data text file</p>
+	<p class="p2">>> x = data(:,1); <span class="p4"> #store the age values as matrix x</p>
+	<p class="p2">y = data(:,2); <span class="p4"> #store the age values as matrix x</p>
+	<p class="p2">>> plot(x,y,'rx','MarkerSize',10); <span class="p4"> #mark the values on a graph with X's</p>
+	<p class="p2">>> hold on; <span class="p4"> </p>
+	<p class="p2">>> xlabel('Age'); <span class="p4"> </p>
+	<p class="p2">>> ylabel('IQ'); <span class="p4"> </p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression_gd3.png" width="559px" class="bigimg"></p>
+	<br>
+
+	<p class="p2">>>m = length(X); <span class="p4">  #store the no of training examples as m</p>
+	<p class="p2">>X = [ones(m, 1) x]; <span class="p4"> #matrix X includes the x0 values</p>
+	<p class="p2">>> theta = (pinv(X'*X))*X'*y <span class="p4"> #Calculate the theta value directly</p>
+	<p class="p3">theta = <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;109.8738<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;-1.1270</p><br>
+
+
+
+
+	<p class="p2">>> plot(X(:,2), X*theta, '-') <span class="p4"> #plot of the predicted hypothesis function</p>
+	<p class="p2">>> legend('Training data', 'Linear regression') <span class="p4"> </p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression_ne1.png" width="550px" class="bigimg"></p>
+	<br>
+
+	<p class="p2">>> predict = [1, 35] *theta <span class="p4"> #Predicting the IQ of a 35 year old person</p>
+	<p class="p3">predict = <br>
+	predict = 70.429</p><br>
+
+	<p class="p2">>> hold on; <span class="p4"> </p>
+	<p class="p2">>> plot(35,predict,'bx','MarkerSize',20); <span class="p4"> #Mark the predicted IQ on the graph</p>
+
+	<br>
+	<p><img src="../ml_images/linear_regression_ne2.png" width="550px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Now if you compare the results from the gradient descent method & the normal equation method, both are almost the same. From gradient descent method, we obtained the theta values as <strong>106.10373, -0.92372</strong>. Whereas from normal equation method, the theta values were <strong>109.8738, -1.1270</strong>. Perhaps if we increased the no of iterations or slightly increased the learning rate, we would have obtained a bit more precise result with the gradient descent method. And this difference in the obtained hypothesis function from both methods shows when we predicted the IQ of a 35 year old person. It was <strong>73.774</strong> using gradient descent method & here it is <strong>70.429</strong></p>
+	
+	
+<br>
+<br>
+
+</body>
+</html>
