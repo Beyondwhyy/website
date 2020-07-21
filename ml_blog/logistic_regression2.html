@@ -1,0 +1,134 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/logistic_regression1.html">Logistic Regression-1</a><br>
+<b> Next:</b> <a href="../ml_blog/logistic_regression_example.html">Logistic Regression Example<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Logistic Regression-2</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Cost function</h2></li></ul>
+	
+	<p class="marg">In the last section, we saw that linear regression hypothesis function needed to be modified inorder to be used for logistic regression problems. Now the obvious question is whether the same cost function can be used here also or is some modification necessary required.</p>
+
+	<p class="marg">The reason that cost function worked for linear regression was because the hypothesis was linear and hence the cost function was convex shaped with a single global minimum. In case of logistic regression, the hypothesis function is no longer linear because of the sigmoid function and using the same definition for cost function would yield a function as shown below.</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg7.png" width="400px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">It will be an impossible task to optimize the parameters theta when using such a cost function with so many local minimums.</p>
+
+	<p class="marg">The cost function for Logistic regression is given by:</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg8.png" width="370px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">In case of linear regression, the error term was half the square of the difference between predicted output h(x) & real output (y). Here things are much trickier. The actual logic behind choosing such a cost function lies in probability theory and it’s best not touched upon if are not familiar with it. We will provide optional articles at the end of the blog series to discuss such topics.</p>
+
+	<p class="marg">For now, think of it this way; log & exponential are inverse functions, meaning log of exponential of a number results in the number itself, so by introducing log we are canceling out the no linearity introduced by the sigmoid function. This way we make sure that the cost function is convex shaped with once global minimum.</p>
+
+
+	<p class="marg">Also notice how the error term is defined separately for both y=0 and  y=1 points? For ease of expression, we can combine the two error terms into one as following:</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg9.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">This combined expression is same as the 2 separate expressions. You can verify this yourself by substituting y=0 & y=1.</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg10.png" width="600px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">So the cost function can be re written as:</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg11.png" width="450px" class="bigimg"></p>
+	<br
+
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Gradient Descent</h2></li></ul>
+	
+	<p class="marg">Just like in linear regression, here too our goal is to minimize the cost function and find the parameters corresponding to minimum cost function.</p>
+
+	<p class="marg">The  gradient descent is implemented as follows:</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg12.png" width="220px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Substituting the equation for the cost function, we can get the parameter update rule as:</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg13.png" width="1250px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Therefore, the update rule for Logistic regression is,</p>
+
+
+	<br>
+	<p><img src="../ml_images/linear_regression29-1.png" width="300px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">If you look back, you’ll notice that this is the exact update rule we used for Linear regression, so what changed? The difference is in the definitions for hypothesis function in both cases.</p>
+
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Vectorized Implementation</h2></li></ul>
+
+	<br>
+	<p><img src="../ml_images/log_reg14.png" width="450px" class="bigimg"></p>
+
+
+	
+<br>
+<br>
+
+</body>
+</html>
