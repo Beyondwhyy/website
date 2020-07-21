@@ -1,0 +1,117 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/linear_regression_normalequation.html">Linear Regression Example (Normal Equation)</a><br>
+<b> Next:</b> <a href="../ml_blog/logistic_regression2.html">Logistic Regression-2<br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Logistic Regression-1</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">The second type of Supervised learning algorithm we will look into is called the Logistic Regression. First things first, it is not a regression algorithm as its name suggests, rather it’s used for classification problems. But the name comes from the fact that classification is done by considering the linear regression model.</p>
+
+	<p class="marg">As mentioned earlier, Classification methods are used in problems where we want to label or categorize inputs. In this section we will be dealing with binary classification problems (those with 2 possible outcomes). </p>
+
+	<p class="marg">For ease of understanding, we will consider this simple example.</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg1.png" width="500px" class="bigimg"></p>
+	<br>
+
+	
+	<p class="marg">Our goal is to predict whether a person with a certain monthly income (say $7000) would own a house or not based on our data set (which I made up).</p>
+
+	<p class="marg">All the notations from linear regression is applicable here as well.</p>
+
+	<p class="marg3"><ol>
+ 	 	<li>No. of training examples <strong>m</strong> is equal to 7.</li>
+  		<li>No. of input features <strong>n</strong> is equal to 1 (monthly income).</li>
+  		<li>The input feature is denoted as <strong>x<sub>1</sub></strong>.</li>
+  		<li>The output feature is denoted as <strong>y</strong>. It has only 2 possible outcomes 1 (owns a house) or 0 (doesn’t own a house)</li>
+  		<li>i<sup>th</sup> training example is denoted as (<strong>x<sub>1</sub><sup>i</sup>, x<sub>2</sub><sup>i</sup> ,y<sup>i</sup></strong>). For instance, the 6th training example in our training data is (6200, 1).</li>
+	</ol></p>
+
+	<p class="marg">The graph corresponding to out data set would be as shown below.</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg2.png" width="400px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Since linear regression is the only algorithm you are familiar with at this point, let try solving this problem using it. You could try fitting the data with a straight line and use a threshold (say 0.5 ) to classify the data (like in the graph below). In theory it should work and it does in some cases, but this isn’t really the best approach because even a few off data points can mess with the predictions big time.</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg3.png" width="500px" class="bigimg"></p>
+	<br>
+
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Hypothesis function</h2></li></ul>
+	
+	<p class="marg">For Logistic regression, ideally we would want a hypothesis function which outputs values only between 0 and 1. So what we can do is to make a slight modification to the linear regression hypothesis function, such that it is suitable for logistic regression. This modification comes in the form of something called the sigmoid function.</p>
+
+	<p class="marg">The sigmoid function, also called the Logistic function is an S-shaped mathematical function having values between 0 and 1.</p>
+
+	<p class="marg">Mathematically, the sigmoid function is defined as:</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg4.png" width="187px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">For large positive values of z, the exponential approaches zero and the function as a whole approaches one. For large negative values of z, the denominator approaches infinity and the function approaches zero.</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg5.png" width="500px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">So the Logistic regression hypothesis function is simply the sigmoid of the linear regression hypothesis function.</p>
+
+	<br>
+	<p><img src="../ml_images/log_reg6.png" width="180px" class="bigimg"></p>
+	
+<br>
+<br>
+
+</body>
+</html>
