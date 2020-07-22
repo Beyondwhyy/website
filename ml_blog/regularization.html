@@ -1,0 +1,174 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../ml_blog/logistic_regression_example.html">Logistic Regression Example</a><br>
+<b> Next:</b> <a href=""><br></a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Regularization</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">Now we'll discuss some short comings of the two algorithms we discussed so far.</p>
+	
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Underfitting</h2></li></ul>
+	
+	<p class="marg">If you are presented with data as shown below, how would you approach the problem? </p>
+
+	<br>
+	<p><img src="../ml_images/reg2.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">You could use linear regression and try to fit a straight line to the data. But it’s pretty evident from observation itself that the data doesn’t follow a linear pattern, so by trying to fit a straight line we are not representing the data appropriately. In other words, we are adamant on making data fit a pattern which it doesn’t have. This is called Underfitting.</p>
+
+	<br>
+	<p><img src="../ml_images/reg1.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Overfitting</h2></li></ul>
+	
+	<p class="marg">Now if decide to fix the issue by adding a bunch of polynomial terms (like x<sup>2</sup>, x<sup>3</sup>, x<sup>4</sup>), we will probably get a curve as shown below.</p>
+
+	<br>
+	<p><img src="../ml_images/reg3.png" width="450px" class="bigimg"></p>
+	<br>
+
+
+	<p class="marg">Yes, we do get a curve that fits all the data points perfectly by adding those polynomial terms, but this isn’t the curve we were looking for, this is kind of unnatural. This problem arises because, by adding too many polynomial terms we have given too much importance to a individual data points (which also contains noise), therefore the curve tries too hard to fit the data points and fails to come up with a general pattern. This is called Overfitting.</p>
+
+	<p class="marg">Ideally, we would want a smooth curve like this to fit our data.</p>
+
+	<br>
+	<p><img src="../ml_images/reg4.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Underfitting & Overfitting are a concern in case of logistic regression as well.</p>
+
+	<br>
+	<p><img src="../ml_images/reg5.png" width="1350px" class="bigimg"></p>
+	<br>
+
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Tackling Overfitting</h2></li></ul>
+	
+	<p class="marg">As you go more into Machine Learning, you’ll realize that Underfitting isn’t much of a problem and it’s Overfitting that is the major culprit most of the time. </p>
+
+	<p class="marg">There are 2 popular methods to tackle the problem of Overfitting:</p>
+
+	<p class="marg3"><ol>
+ 	 	<li>Cross-Validation</li>
+  		<li>Regularization</li>
+	</ol></p>
+
+	<p class="marg">We will stick to Regularization for now and discuss Cross-validation later on. The basic idea behind cross-validation is to split up training data into parts and use one part for training the model and the rest to test the effectiveness of the model.</p><br>
+
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Regularization</h2></li></ul>
+
+	<p class="marg">Consider a function, <strong>f(x) = 2 + 4x +7x<sup>2</sup> + 0.0001 x<sup>3</sup></strong>, this is a cubic polynomial but because the coefficient of x3 is so small, it is practically a quadratic equation. This is exactly what we hope to do with regularization. We want to restrict the parameters to small values such that the impact of each feature is kept to a minimum and the hypothesis function is much simpler and smoother.</p>
+
+	<p class="marg">The two commonly used Regularization techniques are ridge & lasso regression. In both cases, an extra term is added to the cost function to reduce the values of the parameters.</p>
+
+	<p class="marg">In ridge regression, the extra penalty term used is:</p>
+
+	<br>
+	<p><img src="../ml_images/reg6.png" width="130px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Here λ is called the Regularization parameter.  What this extra term does is it hugely increases the coefficients for each parameter θ, hence when we try to minimize the cost function, the parameters θ will become small to compensate for the extra coefficients added. The θ0 term is left out of the regularization, since there is no feature attached to this parameter.</p>
+
+	<p class="marg">In lasso regression, the extra penalty term used is:</p>
+
+	<br>
+	<p><img src="../ml_images/reg7.png" width="130px" class="bigimg"></p>
+	<br>
+
+
+
+	<p class="marg">The difference between the two mentioned regularization techniques is that using ridge regression you can reduce the parameters corresponding to the useless features to a minimum (close to zero). Whereas in lasso regression, you can totally eliminate the parameters corresponding to useless features i.e you can minimize it all the way to zero. We are not going into the reason why these techniques behave in this manner here, but keep these facts in mind.</p>
+
+	<p class="marg">So which technique is better?  Generally, when the number of features are less, it’s not wise to completely eliminate any features, so in such a case Ridge regression is the preferred technique. On the contrary if the number of features are very high, we would want to eliminate a few useless features and Lasso regression is the best option for that.</p>
+
+	<p class="marg">The next important question is, how to chose the value of λ? Typically a large value is chosen as λ, but the problem is that if its value is too high, it may lead to underfitting, which we want to avoid as well. So practically the value of λ is chosen by trial and error using cross validation method.</p><br>
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Regularized Linear Regression</h2></li></ul>
+
+	<p class="marg">Using the Ridge technique, the Linear regression cost function can be modified as:</p>
+
+	<br>
+	<p><img src="../ml_images/reg8.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">So the correspondingly the gradient descent parameter update rule can be modified as:</p>
+
+	<br>
+	<p><img src="../ml_images/reg9.png" width="450px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Similarly, the normal equation formula gets modified as:</p>
+
+	<br>
+	<p><img src="../ml_images/reg10.png" width="500px" class="bigimg"></p>
+	<br>
+
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Regularized Logistic Regression</h2></li></ul>
+
+	<p class="marg">Using the Ridge technique, the Logistic regression cost function can be modified as:</p>
+
+	<br>
+	<p><img src="../ml_images/reg11.png" width="550px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">The update rule is same as in the linear regression.</p>
+
+	
+<br>
+<br>
+
+</body>
+</html>
