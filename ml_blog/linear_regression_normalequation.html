@@ -63,7 +63,7 @@
 	<p class="p2">>> ylabel('IQ'); <span class="p4"> </p>
 
 	<br>
-	<p><img src="../ml_images/linear_regression_gd3.png" width="559px" class="bigimg"></p>
+	<p><img src="../ml_images/linear_regression_gd3.png" width="559px" border="1" class="bigimg"></p>
 	<br>
 
 	<p class="p2">>>m = length(X); <span class="p4">  #store the no of training examples as m</p>
@@ -80,7 +80,7 @@
 	<p class="p2">>> legend('Training data', 'Linear regression') <span class="p4"> </p>
 
 	<br>
-	<p><img src="../ml_images/linear_regression_ne1.png" width="550px" class="bigimg"></p>
+	<p><img src="../ml_images/linear_regression_ne1.png" width="550px" border="1" class="bigimg"></p>
 	<br>
 
 	<p class="p2">>> predict = [1, 35] *theta <span class="p4"> #Predicting the IQ of a 35 year old person</p>
@@ -92,7 +92,7 @@
 'bx','MarkerSize',20); <span class="p4"> #Mark the predicted IQ on the graph</p>
 
 	<br>
-	<p><img src="../ml_images/linear_regression_ne2.png" width="550px" class="bigimg"></p>
+	<p><img src="../ml_images/linear_regression_ne2.png" width="550px" border="1" class="bigimg"></p>
 	<br>
 
 	<p class="marg">Now if you compare the results from the gradient descent method & the normal equation method, both are almost the same. From gradient descent method, we obtained the theta values as <strong>106.10373, -0.92372</strong>. Whereas from normal equation method, the theta values were <strong>109.8738, -1.1270</strong>. Perhaps if we increased the no of iterations or slightly increased the learning rate, we would have obtained a bit more precise result with the gradient descent method. And this difference in the obtained hypothesis function from both methods shows when we predicted the IQ of a 35 year old person. It was <strong>73.774</strong> using gradient descent method & here it is <strong>70.429</strong></p>
