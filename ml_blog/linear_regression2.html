@@ -52,6 +52,7 @@
 
 	<p class="marg">In the last section we learnt about cost function, which is essentially an error term denoting how far the hypothesis function is from what it should be. Hence our goal is to basically minimize the error i.e. the cost function and find the parameters corresponding to minimum cost function.</p>
 	
+	<br>
 	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Gradient Descent</h2></li></ul>
 	
 	<p class="marg">Gradient descent is one of the most popular and efficient ways to minimize the cost function. For now forget about the formula for the cost function, just consider it as a function of the parameters <strong>θ<sub>0</sub>, θ<sub>1</sub></strong>.</p>
@@ -73,29 +74,29 @@
 	<p><img src="../ml_images/linear_regression10.png" width="300px" class="bigimg"></p>
 	<br>
 
-	<p class="marg">To get an intuitive understanding of this formula, consider the variation of the cost function with respect to a single parameter (say θ<sub>1</sub>), as shown below.</p>
+	<p class="marg">To get an intuitive understanding of this formula, consider the variation of the cost function with respect to a single parameter (say <strong>θ<sub>1</sub></strong>), as shown below.</p>
 
 	<br>
 	<p><img src="../ml_images/linear_regression11.png" width="300px" class="bigimg"></p>
 	<br>
 
-	<p class="marg">If we start at point A, the value of the parameter θ1 decreases, as both the slope at the point ∂ J(θ1 )/∂θ1 and the learning rate α are positive quantities. Finally as θ1 reaches point C, its value remains constant, as the slope at the point is zero. Instead if we start at point B, the value of the parameter θ1 increases till it reaches point C, as the slope at the point ∂ J(θ1 )/∂θ1 is a negative quantity.</p>
+	<p class="marg">If we start at point A, the value of the parameter <strong>θ<sub>1</sub></strong> decreases, as both the slope at the point <strong>∂J(θ<sub>1</sub>)/∂θ<sub>1</sub></strong> and the learning rate α are positive quantities. Finally as <strong>θ<sub>1</sub></strong> reaches point C, its value remains constant, as the slope at the point is zero. Instead if we start at point B, the value of the parameter θ1 increases till it reaches point C, as the slope at the point <strong>∂J(θ<sub>1</sub>)/∂θ<sub>1</sub></strong> is a negative quantity.</p>
 
 
-	<p class="marg">Now we can discuss the importance of the learning rate α. Common sense says it’s a good idea to make the learning rate as big as possible, that way the gradient descent will be faster, hence saving time. This is kinda true, but there is a problem with making the learning rate very large, we might overshoot the target and may not reach the minimum at all. In the figure shown below, the parameter decreases from point A, but overshoots and reaches point B. Then it increases to point D and so on. So instead of converging, the cost function is actually diverging due to the large learning rate.</p>
+	<p class="marg">Now we can discuss the importance of the learning rate <strong>α</strong>. Common sense says it’s a good idea to make the learning rate as big as possible, that way the gradient descent will be faster, hence saving time. This is kinda true, but there is a problem with making the learning rate very large, we might overshoot the target and may not reach the minimum at all. In the figure shown below, the parameter decreases from point A, but overshoots and reaches point B. Then it increases to point D and so on. So instead of converging, the cost function is actually diverging due to the large learning rate.</p>
 
 	<br>
 	<p><img src="../ml_images/linear_regression12.png" width="300px" class="bigimg"></p>
 	<br>
 
-	<p class="marg">So the best option is to use a large value of α, but not too large at the same time. We might have to experiment with different values to get best results.</p>
+	<p class="marg">So the best option is to use a large value of <strong>α</strong>, but not too large at the same time. We might have to experiment with different values to get best results.</p>
 
 	<p class="marg">This is how the gradient descent is implemented for both parameters:</p>
 
 	<br>
 	<p><img src="../ml_images/linear_regression13.png" width="300px" class="bigimg"></p>
 	<br>
-	<p class="marg">Notice how we stored the updated the parameters to 2 other variables temp0 and temp1 before assigning them to the parameters θ0 and θ1. This is to ensure that both parameters are updated simultaneously. Otherwise one parameter is updated first, then the other parameter is calculated using the updated first parameter. This sort of works, but we might get some weird behavior, so it is not the common practice.</p>
+	<p class="marg">Notice how we stored the updated the parameters to 2 other variables temp0 and temp1 before assigning them to the parameters <strong>θ<sub>0</sub></strong> and <strong>θ<sub>1</sub></strong>. This is to ensure that both parameters are updated simultaneously. Otherwise one parameter is updated first, then the other parameter is calculated using the updated first parameter. This sort of works, but we might get some weird behavior, so it is not the common practice.</p>
 
 	<p class="marg">If we substitute the equation for the cost function, we can get the parameter update rule as following: </p>
 
@@ -109,7 +110,7 @@
 	<p><img src="../ml_images/linear_regression29-1.png" width="400px" class="bigimg"></p>
 	<br>
 
-	<p class="marg">(Remember x0 =1)</p>
+	<p class="marg">(Remember <strong>x<sub>0</sub></strong =1)</p>
 
 	<p class="marg">Please re read Basic Calculus & Multi variable calculus if you are unsure about the derivations.</p><br>
 
