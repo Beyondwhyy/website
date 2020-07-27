@@ -1,0 +1,133 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a ></a><br>
+<b> Next:</b> <a href="../engmath_blog/fourier_transform">Fourier transform</a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Fourier Series</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+	<p class="marg">In 1807, Joseph Fourier (pronounced Fouye) came up with a mathematical tool for representing periodic functions, called Fourier series. Using the Fourier series it is possible to express periodic functions in terms of some combination of sinusoids (sines and cosines). This is applicable to any periodic function, however awkwardly shaped they may be. Isn’t this cool?? The idea was so crazy that, even other famous mathematicians of the time, like Lagrange opposed it.</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier1.png" width="800px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">The above figure perfectly depicts the idea of the Fourier series. Notice how a series of sinusoids combine together to form the resultant function, which looks nothing like a sinusoid. These sinusoid components can have different amplitudes and different frequencies.</p>
+
+	<p class="marg">Fourier series is not just a pretty textbook concept, it has real practical applications in many different areas of engineering. For instance, in signal processing, instead of using a single complex signal as the input to a system and analyzing the response (which is harder), why not input component sinusoids to the system and add up their responses (this is easier). Wouldn’t both be the same?? Yes, it would be, thanks to Fourier series. So the only thing we really need to know is the response of the system to sinusoids. From this we can predict the response to other periodic signals.</p>
+
+	<p class="marg">The General expression for Fourier series is:</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier3.png" width="500px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Here a<sub>0</sub>,a<sub>1</sub>,a<sub>2</sub>…,b<sub>1</sub>,b<sub>2</sub>,b<sub>3</sub>….are the Fourier coefficients. They tell us how much a sine or cosine function of a particular frequency is contributing to the resultant function.</p>
+
+	
+	<p class="marg">The value of a<sub>0</sub> tells us how much a cosine of zero frequency (cos 0 =1) or constant term is present in the resultant function. a<sub>0</sub> is also called the DC value or the Average value or the DC offset. Since all the other terms in the expansion are pure sinusoids, their individually average to zero, so the average value solely depends on a<sub>0</sub>.</p>
+
+	<p class="marg">Since sin 0 = 0, there can’t be any contribution from zero frequency sine function, so b<sub>0</sub> is always 0. The value of a<sub>1</sub> tells us how much a cosine of fundamental frequency is present in the resultant function.  Similarly, contribution from each sinusoid in the resultant function can be found out separately. </p>
+
+	<p class="marg">For example, if <strong>x(t) = 4sin2ωt + 3cosωt + 10sin3ωt</strong>, that means function <strong>x(t)</strong> is made up of a sin wave of twice the fundamental frequency (of amplitude 4), a cos wave of fundamental frequency (of amplitude 3) and a sin wave of 3 times the fundamental frequency (of amplitude 10).</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier4.png" width="800px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">The fourier coefficients can be obtained as:</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier8.png" width="250px" class="bigimg"></p>
+	<br>
+
+	<br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Complex Notation</h2></li></ul>
+	
+	<p class="marg">Fourier series can be expressed in a more compact form using complex notation. Using the complex notation, we can represent the contributions from both sine and cosine waves of the same frequency by a single coefficient.</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier6.png" class="bigimg"></p>
+	<br>
+
+	<p class="marg">This is called the synthesis equation. Here the Fourier coefficients are complex. This notation has its own advantages, unlike in previous case, it is possible to calculate all Fourier coefficients using a single expression. </p>
+
+	<p class="marg">The values of c<sub>n</sub> can be obtained using the expression:</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier7.png" class="bigimg"></p>
+	<br>
+
+	<p class="marg">This expression is called the analysis equation and the plot of |c<sub>n</sub>| vs n is called the frequency spectrum of the signal.</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier2.png" class="bigimg"></p>
+	<br>
+
+
+	<p class="marg">Notice the lines corresponding to each frequency component in the above picture. This is exactly the Frequency spectrum. It tells us how much each frequency component contributes to the original signal. This information is invaluable to us.</p>
+
+	<p class="marg">Let’s look at a practical example: In earth quake prone areas, houses are built to resist shock waves. But the earthquake is not a single frequency signal, it has many frequency components and it’s not possible to design houses that are resistant to the entire wave. To overcome this difficulty, seismologists and structural engineers, do Fourier analysis on earthquake wave and use the frequency spectrum obtained, to figure out the dominant components in the wave. This way it is possible to design houses that are resistant to these particular frequency components in the wave. The other smaller components don’t have any significant impact so they can ignored.</p>
+	<br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Gibbs Phenomenon</h2></li></ul>
+	
+	<p class="marg">The main reason behind Lagrange’s objection to the Fourier series was that, he believed it is not possible to represent discontinuous functions (like square wave) in terms of sinusoids. Guess what, there was some merit behind Lagrange’s argument. In some way he was spot on, it is actually impossible to perfectly represent discontinuous signals using sinusoids.</p>
+
+	<br>
+	<p><img src="../engmath_images/fourier5.png" width="500px" class="bigimg"></p>
+	<br>
+	
+	<p class="marg">Notice how there is an overshoot at the corners of the square wave in the figure above. When a function takes a sudden jump, the Fourier estimation ends up overshooting that jump. This is known as Gibbs phenomenon. That overshoot will never go to zero no matter how many terms are added.</p>
+	
+
+<br>
+<br>
+
+</body>
+</html>
