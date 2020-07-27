@@ -1,0 +1,116 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../engmath_blog/fourier_transform">Fourier transform</a><br>
+<b> Next:</b> <a href="../engmath_blog/laplace_transform">Laplace Transform</a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Laplace Transform</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Transforms</h2></li></ul>
+
+	<p class="marg">Before we explore Laplace transform, let’s look into transforms in general and why we need them.</p>
+
+	<p class="marg">Consider a simple problem: compute the value of <strong>x = 3.4<sup>2.4</sup></strong>. It is not easy to get the exact value using straightforward calculation. What we can do to make this problem solvable is to take natural log on both sides: now the equation becomes <strong>ln(x) = 2.4 ln (3.4)</strong>. Now the value of <strong>ln(x)</strong> can be easily obtained and to obtain the value of <strong>x</strong>, all we have to do is to take the antilog of the value obtained. What we did was to take the hard problem, convert it into an easier equivalent problem. This is the very idea behind transforms. The concept of transformation is illustrated with the simple diagram below:</p>
+
+	<br>
+	<p><img src="../engmath_images/lt1.png" width="500px" class="bigimg"></p>
+	<br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Laplace transform</h2></li></ul>
+
+	<p class="marg">The Laplace transform is a well-established mathematical technique for solving differential equations. It is named in honor of the great French mathematician, <a target="blank" href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace">Pierre Simon De Laplace</a> (1749-1827). Like all transforms, the Laplace transform changes a function into another according to some fixed set of rules or equations.</p>
+
+	<p class="marg">The peculiarity of physical systems (LTI systems) is that they can be modeled by Differential equations. But solving Differential equations isn’t the easiest of tasks. What kind of transformation might we use with ODEs? Based on our experience with logarithms, ideally we would want a transformation, which allows us to replace the operation of differentiation by some easier operation, perhaps something similar to multiplication. Even if we don’t get this exactly, coming close might still be useful. This is exactly what the Laplace transform is used for. The Laplace transform, transforms the differential equations into algebraic equations which are easier to manipulate and solve. Once the solution in the Laplace transform domain is obtained, the inverse Laplace transform is used to obtain the solution to the differential equation.</p>
+
+	<p class="marg">The Laplace transform of a function <strong>f(t)</strong>, denoted as <strong>F(s)</strong>, is defined as:</p>
+
+	<br>
+	<p><img src="../engmath_images/lt2.png" width="250px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">This equation might look complex at first. But fortunately, most times you don’t need to use this equation, you can easily get away with knowing some standard results and a few properties.</p><br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Physical Meaning</h2></li></ul>
+
+	<p class="marg">Making sense of the Laplace transform and getting your head around its physical meaning isn’t the easiest of tasks. To understand the meaning of Laplace transform you need to have some idea about the <a href="../engmath_blog/fourier_transform">Fourier transform</a>. If you look at Fourier transform equation, you can spot a striking similarity with the Laplace transform equation. The two equations are very similar, except that in the Laplace transform equation, term ‘s’ is used in place of ‘jω’. This similarity is because the Laplace transform was developed in order to overcome some limitations of the Fourier transform. From a mathematical standpoint, the Fourier transform is a subset of the Laplace transform. The connection between the two will become more apparent from the expansion of ‘s’ shown below,</p>
+
+	<br>
+	<p><img src="../engmath_images/lt3.png" width="300px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Where σ is a real number.</p>
+
+	<p class="marg">The Laplace transform is basically the Fourier transform with an additional term (e<sup>-σt</sup>).  Although the Fourier transform is an extremely useful tool for analyzing many kinds of engineering problems, it has some shortcomings that can be overcome, in many ways by the Laplace Transform.</p>
+
+	<p class="marg">For example, in control systems, the Fourier transform is not very useful for studying the stability of systems because, in studying instabilities, it is often necessary to deal with functions that diverge in time and we know that the Fourier integral does not converge for functions that diverge because such functions are not absolutely integrable.</p>
+
+	<p class="marg">Because of the exponential weighting (e<sup>-σt</sup>), the Laplace transform can converge for functions for which the Fourier transform does not converge. Depending upon the value of σ, which is the real part of s, a function (whose transform we are taking) is be multiplied by a decaying or expanding exponential. By tactfully choosing the value of σ, thereby multiplying the function with a decaying exponential, we can ensure that it becomes convergent. The region in the “s” plane where this infinite integral converges is called the region of convergence (ROC).</p>
+
+	<br>
+	<p><img src="../engmath_images/lt4.png" width="700px" class="bigimg"></p>
+	<br>
+
+	<p class="marg">Intuitively, this means that the Laplace transform analyses the functions both in terms of exponentials and sinusoids. The center line in the s-plane (at  = 0) corresponds to the Fourier transform <strong>F(ω)</strong>.</p><br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Properties of Laplace Transform</h2></li></ul>
+
+	<p class="marg">Some of the basic properties of Laplace transform are:</p>
+
+	<br>
+	<p><img src="../engmath_images/lt5.png" width="600px" border="1" class="bigimg"></p>
+	<br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Standard Laplace Transform Pairs</h2></li></ul>
+
+	<br>
+	<p><img src="../engmath_images/lt6.png" width="300px" border="1" class="bigimg"></p>
+	<br>
+
+<br>
+<br>
+
+</body>
+</html>
