@@ -1,0 +1,113 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+<b> Previous:</b> <a href="../engmath_blog/fourier_series">Fourier series</a><br>
+<b> Next:</b> <a href="../engmath_blog/laplace_transform">Laplace transform</a>
+
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Fourier Transform</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+
+
+
+<font size="4" >
+
+
+	<p class="marg">We know that the <a href="../engmath_blog/fourier_series">Fourier series</a> is used to represent a periodic function by a discrete sum of complex exponentials. But how often are natural signals periodic??  Now that’s a problem. Too bad we can’t apply Fourier series to non periodic signals.</p>
+
+	<p class="marg">The way around this is to assume that an Aperiodic signal is a periodic signal with infinite time period. We assume that the same pattern repeats after infinite time. And the result is the Fourier transform.</p>
+
+	<p class="marg">The Fourier transform is used to represent a general, non periodic function by a continuous superposition or integral of complex exponentials. The Fourier transform can be viewed as the limit of the Fourier series of a function when the period approaches to infinity, so the limits of integration change from one period to (−∞,∞).</p>
+
+	<p class="marg">The expression for the Fourier Transform is given by:</p>
+
+	<br>
+	<p><img src="../engmath_images/ft1.png" width="230" class="bigimg"></p>
+	<br>
+
+	<p class="marg">For Periodic functions, there is a definite fixed no. of frequency components, but for Aperiodic functions, there are infinite no. of  frequency components, hence <strong>X(ω)</strong> is a continuous function of <strong>ω</strong>, unlike cn which is a discrete quantity.  If you try using the Fourier transform on periodic functions, you can see that the Fourier series coefficients(c<sub>n</sub>) are basically the sampled values of <strong>X(ω)</strong>. In other words, <strong>X(ω)</strong> forms the envelope for the Fourier series coefficients.</p>
+
+	<br>
+	<p><img src="../engmath_images/ft2.png" width="300" class="bigimg"></p>
+	<br>
+
+	<p class="marg">To obtain the original function from its frequency distribution, i.e. go back from frequency domain to the time domain, we need to use the Inverse Fourier transform:</p>
+
+	<br>
+	<p><img src="../engmath_images/ft3.png" width="250" class="bigimg"></p>
+	<br>
+
+	<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Properties of the Fourier Transform</h2></li></ul>
+
+	<p class="marg"><ul>
+ 	 	<li><strong>Linearity</strong>
+	 	 	<br>
+			<p><img src="../engmath_images/ft7.png" width="380" class="bigimg"></p>
+			<br></li>
+  		<li><strong>Time shifting</strong>
+  			<p>If we were to time shift a signal, it’s magnitude spectrum won’t change, only it’s phase spectrum changes.</p>
+  			<br>
+			<p><img src="../engmath_images/ft6.png" width="240" class="bigimg"></p>
+			<br>
+			<p>Do note that the magnitude of <strong>e<sup>-jnωt<sub>0</sub></sup> = 1</strong>, so this term can only bring a phase shift.</p></li>
+  		<li><strong>Differentiation</strong>
+  			<br>
+			<p><img src="../engmath_images/ft5.png" width="190" class="bigimg"></p>
+			<br></li>
+		<li><strong>Scaling Property</strong>
+  			<br>
+			<p><img src="../engmath_images/ft4.png" width="200" class="bigimg"></p>
+			<br></li>
+		<li><strong>Duality</strong>
+  			<br>
+			<p><img src="../engmath_images/ft8.png" width="190" class="bigimg"></p>
+			<br>
+			<p>For example, the Fourier transform of a square wave is a sinc function and the Fourier transform of a sinc function is a square wave.</p></li>
+	</ul></p>
+
+<br>
+<br>
+
+
+</body>
+</html>
