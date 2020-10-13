@@ -1,0 +1,100 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/closed_loop_system.html">Closed loop system</a><br>
+<b> Next:</b> <a href="../control_theory_blog/unit_impulse_response.html">Unit Impulse Response</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Transfer Function</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+<p class="marg">The Transfer function is nothing but a mathematical indication of the relationship existing between the input and the output of a Control system. In other words, the transfer function is a mathematical expression that tells what a system is doing to the input. In designing a system, first the system parameters are designed and their values are chosen as per requirement. Then the performance of the system is observed for a sample input. We can say that the system parameters are acting on the input to produce an output. Or in other words, the input gets transferred into output once applied to the system. This is the concept of Transfer function.</p>
+
+<p class="marg">Mathematically, the Transfer function is defined as the ratio of Laplace transform of the output of the system to the Laplace transform of the input of the system, assuming zero initial conditions.</p>
+
+<br><p><img src="../control_theory_images/tf2.png" width="350" class="bigimg"></p><br>
+
+<p class="marg">The Transfer function of the system G(s) is given by,</p>
+
+<br><p><img src="../control_theory_images/tf3.png" width="400" class="bigimg"></p><br>
+
+<p class="marg">Consider this ridiculous example. Suppose you are asked to write your name on a black board, using a contraption, as shown below.</p>
+
+<br><p><img src="../control_theory_images/tf4.png" width="700" class="bigimg"></p><br>
+
+
+<p class="marg">Disregarding its complexity, this is nothing but another Control system with an input and an output. The difference here is that this Control system is itself made up of 4 other Control systems. So to understand the effect of the Control system as a whole, we need to characterize the behavior of each part separately and combine them. All we have to do is to find the transfer function of each part and combine them in some manner. Since the output of one part is the input to the next part, the Transfer function of the system as a whole is simply the product of individual Transfer functions.</p>
+
+<br><p><img src="../control_theory_images/tf5.png" width="350" class="bigimg"></p>
+
+<br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Terminology related to Transfer Function</h2></li></ul>
+
+
+<p class="marg">The Transfer function of a system can expressed as the ratio of two functions of ‘s’, <b>G(s) = P(s)/Q(s)</b>. In most cases, it is more convenient to represent the rational transfer function in the factorized form.</p>
+
+<ul>
+	<li><p class="marg"><b>DC Gain:</b>
+The term K in the transfer function (in factorized form) is called the Gain factor or the DC gain. It is simply the value of the transfer function at zero frequency i.e. s=0.</p></li>
+
+
+	<li><p class="marg"><b>Poles & Zeros:</b>
+The values of ‘s’ for which the magnitude of the transfer function becomes infinity are called the Poles of the system. These are simply the roots of the denominator of the transfer function.</p>
+
+<p class="marg">And the values of ‘s’ for which the magnitude of the transfer function becomes zero are called the Zeros of the system. Poles and Zeros may be real or complex-conjugates or combination of both.</p>
+
+<p class="marg"><b>(ex) G(s) = (s+2)/s(s+5)</b></p>
+
+<p class="marg">For this transfer function, there are two poles at s= 0 and s= -5 and a zero at s= -2. These values can be plotted on the complex s-plane, using an X for poles and O for zeros.</p></li>
+
+
+	<li><p class="marg"><b>Order of the System:</b>
+The order of the system is the highest power of ‘s’ present in the denominator polynomial of the transfer function. The system in our example is a second order system.</p></li>
+
+<br>
+<br>
+
+</body>
+</html>
