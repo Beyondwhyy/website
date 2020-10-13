@@ -1,0 +1,112 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/control_systems_terminology.html">Control systems Terminology</a><br>
+<b> Next:</b> <a href="../control_theory_blog/open_loop_system.html">Open Loop System</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Classification of Control Systems</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+<p class="marg">There are a lot of ways to classify Control systems; Natural-Manmade, Single input single output -Single input multiple output etc. Here are some important classifications:</p> <br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Time Variant & Invariant Systems</h2></li></ul>
+
+
+<p class="marg">Time Invariant Control systems are those in which the system parameters are independent of time. In other words, the system behavior doesn’t change with time. For example, consider an electrical network, say a mobile charger consisting of resistors and capacitors. It produces an output of 5V when connected to a 230V AC supply. This system is a time invariant one, because it is expected to behave exactly the same way whenever it is used.</p>
+
+<p class="marg">On the other hand, Systems whose parameters are functions of time are called Time varying systems. The behavior of such systems not only depends on the input, but also the time at which the input is applied. The complexity of design increases considerably for such type of Control systems. </p>
+
+<br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Linear & Non Linear Systems</h2></li></ul>
+
+
+<p class="marg">A Linear system is one that obeys the Superposition property. Superposition property is a basically a combination of 2 system properties.</p>
+
+<ol>
+<li><p class="marg"><b>Additivity property:</b> A system is said to be additive if the response of a system when 2 or more inputs are applied together is equal to the sum of responses when the signals are applied individually. Suppose we provide an input (x<sub>1</sub>) to a system and we measure its response. Next, we provide a second input (x<sub>2</sub>) and measure its response. Then, we provide a combined input x<sub>1</sub> + x<sub>2</sub>. If the system is linear, then the measured response will be just the sum of the individual responses</p>
+
+<p align="CENTER">i.e. if <b><font size="+2">x<sub>1</sub>(t) → y<sub>1</sub>(t)</font> and <font size="+2">x<sub>2</sub>(t) → y<sub>2</sub>(t)</b></font>,
+
+<br>Then the system is additive if, <b><font size="+2">x<sub>1</sub>(t) + x<sub>2</sub>(t) → y<sub>1</sub>(t) + y<sub>2</sub>(t)</font></b></p>
+</li>
+
+
+<li><p class="marg"><b>Homogeneity or Scaling property</b>: A system is said to obey Homogeneity property, if the response of a system to a scaled input is the scaled version of the response to the unscaled input. This means that, as we increase the strength of a simple input to a linear system, say we double it, then the output strength will also be doubled. For example, if a person’s voice becomes twice as loud, the ear should respond twice as much provided it is a linear system.</p>
+
+<p align="CENTER">i.e. if <font size="+2"><b>x(t) → y(t)</b></font>,
+
+<br>Then the system obeys homogeneity property if, <font size="+2"><b>a x(t) → a y(t)</b></font>, where <b>a</b> is constant.</p>
+
+</li>
+</ol>
+<br>
+
+<p class="marg">Combining both these properties we get the superposition property.</p>
+
+<font size="+2"><p align="CENTER"><b>a x<sub>1</sub>(t) + b x<sub>2</sub>(t) → a y<sub>1</sub>(t) + b y<sub>2</sub>(t)</b></p></font>
+
+<p class="marg">An interesting observation to be made from this property is that, for linear systems zero input yields zero output</p>
+
+<p class="marg">Both Linear and Time Invariant systems are two very important classes of Control Systems. In practice, it is difficult to find a perfectly linear time invariant system. Most of the practical systems are non-linear to a certain extent. However, more often than not, we model real world systems as Linear Time Invariant systems or LTI systems. This is because, analyzing and finding solutions to non-linear time variant systems are extremely difficult and time consuming. But if the presence of certain non-linearity is negligible and not effecting the system response badly, they can be treated as Linear (for limited range of operation) by making some assumptions and approximations.</p><br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Continuous & Discrete Time Systems</h2></li></ul>
+
+
+<p class="marg">Mathematical functions are of two basic types, Continuous functions and Discrete functions. Continuous time functions are those functions that are defined for every instant of time. This means that you can draw a continuous function without lifting your pen or pencil from the paper. Discrete time functions on the other hand, are those functions, whose values are defined only for certain instants of time. For example, if you take the temperature reading of your room after every hour and plot it, what you get is a discrete time function. The temperature values are only defined at the hour marks and not for the entire duration of time. The value of temperature at other instants (say at half or quarter hour marks) are simply not defined.</p>
+
+<p class="marg">In a continuous-time Control system all the system variables are continuous time functions. In a discrete-time Control system at least one of the system variables is a discrete function. Microprocessor and computer based systems are discrete time systems.</p>
+<br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Open & Closed Loop Systems</h2></li></ul>
+
+
+<p class="marg">Refer <a href="../control_theory_blog/open_loop_system.html">Open Loop System</a>, <a href="../control_theory_blog/closed_loop_system.html">Closed Loop System</a></p>
+
+<br>
+<br>
+
+</body>
+</html>
