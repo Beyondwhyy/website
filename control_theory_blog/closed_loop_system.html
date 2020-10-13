@@ -1,0 +1,72 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/open_loop_system.html">Open loop system</a><br>
+<b> Next:</b> <a href="../control_theory_blog/transfer_function.html">Transfer Function</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Closed Loop System</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+<p class="marg">A Closed loop system is a system in which the output has a bearing on the control mechanism of the system. In a Closed loop system, an actuating error signal, which is the difference between the input signal and the output signal (in some form, not always directly) is fed to the controller. It is this error signal that drives the system. If the output of the system falls lower than the desired value, the corresponding error signal ensures that the output rises to the desired value and if the output rises above the desired value, its corresponding error signal makes the output decrease to the desired value. This way the output is always scrutinized and the corrections are made automatically.</p>
+
+<br><p><img src="../control_theory_images/closed1.png" width="700" class="bigimg"></p><br>
+
+<p class="marg">A Home heating system is an example of a Closed loop system. When the temperature is above the desired value, an error signal is generated and the valve is actuated to bring the temperature down to desired value. Similarly, it automatically raises the temperature, when it’s too cold.</p>
+
+<br><p><img src="../control_theory_images/closed2.png" width="700" class="bigimg"></p><br>
+
+<p class="marg">Something to be noted is that, it is not always possible, sometimes not desirable to feed back the available output signal directly. Depending on the nature of the controller and the plant, it may be required to attenuate it, amplify it, or sometimes even change its nature (to digital etc.). This changed input is called the reference input. While the Closed loop systems have much more desirable properties than its counterpart, they do have some undesirable properties. Firstly, with all the complexity, designing these systems is a challenge in itself. But the critical area where they lose out to the Open loop systems is stability. One might have figured, that with the self-correcting nature of these systems, they are far more stable. But the problem is that these systems have a tendency to over correct the errors and that may overtime lead to oscillations. The problem of stability is a severe one and must be taken care of in the design stages (which again adds complexity in designing). </p>
+
+<br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Open v/s Closed Loop System</h2></li></ul>
+
+<br><p><img src="../control_theory_images/openvsclosed.png" width="500" class="bigimg"></p><br>
+
+<br>
+<br>
+
+</body>
+</html>
