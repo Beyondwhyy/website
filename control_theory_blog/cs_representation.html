@@ -1,0 +1,126 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/unit_impulse_response.html">Unit Impulse Response</a><br>
+<b> Next:</b> <a href="../control_theory_blog/masons_gain_formula.html">Mason's Gain Formula</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Representation</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Block Diagram Representation</h2></li></ul>
+
+<p class="marg">If a given system is a complicated one (like our example from the last section), it is very difficult to analyze the system as a whole. For such Control systems, we can find the transfer function of each and every element of the system. And by showing connection between the elements, the complete system can be split into different blocks and analyzed conveniently.</p>
+
+<p class="marg">In block diagram representation, the interconnection of system components to form a system can be conveniently shown by the blocks arranged in proper sequence. It explains the cause and effect relationship existing between the input and output of the system, through the blocks. Each block in a block diagram is called a Functional block, it means the block explains the mathematical operation on the input by the element to produce the corresponding output. The transfer function of the element is mentioned inside the block.</p>
+
+<p class="marg">There are four basic components of a block diagram. First are the blocks themselves describing the relation between input and output through transfer function. Then there are summing points, where the output of two or more blocks are added algebraically. The third component of a block diagram is called a take-off point, which represent the application of total output from a point as the input to some other block. Finally block diagrams contain arrows indicating the direction of flow of signals.</p>
+
+<br><p><img src="../control_theory_images/block1.png" width="400" class="bigimg"></p><br>
+
+
+
+<p class="marg">Utilizing some basic rules, it is possible to reduce a complex block diagram to a simple form.</p>
+
+
+<ol>
+	<li><p class="marg"><b>Combining Cascade blocks:</b><br><br>
+	Blocks connected in cascade can be replaced by a single block with transfer function equal to the product of the respective transfer functions.</p>
+
+	<br><p><img src="../control_theory_images/block2.png" width="450" class="bigimg"></p><br>
+</li>
+
+	<li><p class="marg"><b>Eliminating a Feedback loop:</b><br><br>
+	The transfer function of a simple feedback loop with, where G(s) is the forward path transfer function and H(s) is the feedback path transfer function, is given by</p>
+
+	<br><p><img src="../control_theory_images/block3.png" width="150" class="bigimg"></p>
+	<br><p><img src="../control_theory_images/block4.png" width="400" class="bigimg"></p><br>
+</li>
+
+	<li><p class="marg"><b>Parallel Blocks:</b><br><br>
+	Blocks are said to be in parallel if they have a common input and the overall output is the sum of the individual outputs. The overall transfer function is simply the sum of the transfer functions of the individual blocks</p>
+
+	<br><p><img src="../control_theory_images/block5.png" width="400" class="bigimg"></p><br>
+
+</li>
+
+	<li><p class="marg"><b>Moving a summing point ahead of a block:</b><br><br>
+	It is sometimes necessary to move a summing point ahead of a block to simplify the block diagram. This can be done provided the transfer function of the blocks are modified accordingly.</p>
+
+	<br><p><img src="../control_theory_images/block6.png" width="330" class="bigimg"></p><br>
+
+	</li>
+
+	<li><p class="marg"><b>Moving a summing point behind a block:</b></p>
+
+	<br><p><img src="../control_theory_images/block7.png" width="350" class="bigimg"></p><br>
+	</li>
+
+	<li><p class="marg"><b>Moving a pick-off point behind a block:</b></p>
+
+	<br><p><img src="../control_theory_images/block8.png" width="300" class="bigimg"></p><br>
+	</li>
+
+	<li><p class="marg"><b>Moving a pick-off point ahead of a block:</b></p>
+
+	<br><p><img src="../control_theory_images/block9.png" width="350" class="bigimg"></p><br>
+	</li>
+
+</ol>
+
+<br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Signal Flow Graph</h2></li></ul>
+
+
+<p class="marg">Signal flow graphs are an alternate way of representing systems, particularly when the set of equations describing the system are available. Unlike block diagrams which consist of blocks, arrows, summing junctions and pickoff points, a signal-flow graph consists only of branches, which represent systems and nodes, which represent signals. In the signal flow graph, all the variables, dependent and independent are represented by small circles called Nodes. The relationships between various nodes are represented by joining the nodes as per the equations. The lines joining the nodes are called branches. Each branch is associated with a transfer function and an arrow. The transfer function represents the relationship between adjoining variables and the arrow indicates the direction of flow of signals.</p>
+
+<br><p><img src="../control_theory_images/signalflow1.png" width="500" class="bigimg"></p><br>
+
+
+<br>
+<br>
+
+</body>
+</html>
