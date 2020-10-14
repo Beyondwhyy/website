@@ -1,0 +1,91 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/transfer_function.html">Transfer Function</a><br>
+<b> Next:</b> <a href="../control_theory_blog/block_diagram.html">Block Diagram</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Unit Impulse Response</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+<p class="marg">The Unit Impulse function is a very important function in Control systems and Signal Processing. Mathematically, it is defined as,</p>
+
+<br><p><img src="../control_theory_images/imp1.png" width="200" class="bigimg"></p><br>
+
+<p class="marg">The Impulse signal can be imagined as a short pulse, like the output when a switch is turned on and off as fast as you can. But if the value of the Unit Impulse function is ∞ at t = 0, then why the name Unit Impulse function? The name comes from the fact that the Unit impulse function has a unit area at t =0, not its height. Consider a narrow rectangular pulse of width A and height 1/A, so that the area under the pulse = 1. Now if we go on reducing the width A and maintain the area as unity, then the height 1/A will go on increasing. Ultimately when A→ 0, 1/A→ ∞ and it results in a pulse of infinite magnitude. </p>
+
+<br><p><img src="../control_theory_images/imp2.png" width="300" class="bigimg"></p>
+
+<br><p><img src="../control_theory_images/imp3.png" width="250" class="bigimg"></p><br>
+
+<p class="marg">The height of the arrow is used to depict the area of a scaled impulse. The unit Impulse function is also known as the delta function or the delta-dirac function.</p>
+
+<p class="marg">The speciality of the Unit Impulse function is that any signal can be constructed out of scaled and shifted Unit Impulse signals (shown in figure below). This is called the Sifting property of Unit Impulse function.</p>
+
+<br><p><img src="../control_theory_images/imp4.png" width="300" class="bigimg"></p><br>
+
+<ul type="circle"><li><h2 class="marg2"><a name="SECTION00037000000000000000"></a><a name="slorentz"></a>Impulse Response</h2></li></ul>
+
+
+<p class="marg">When working with control systems, we would want to test out its response to a signal or a range of signals. How do we do that? Surely, we can't go around testing the response of every signal one after the other. It's too cumbersome and most times uneconomical. There's an easier way, using Unit Impulses. The idea is that by figuring out how the system responds to a Unit Impulse signal, we should be able to predict the system response to any input signal. The response of a system to a Unit Impulse signal is called the Unit Impulse Response (denoted by h(t)). </p>
+
+<br><p><img src="../control_theory_images/imp5.png" width="600" class="bigimg"></p><br>
+
+<p class="marg">For LTI systems, the Impulse response is scaled and shifted by the same factor as the input Impulse signal. So the system response to any input can be obtained by summing up the scaled and shifted impulse responses (as shown in above figure).</p>
+
+<p class="marg">Mathematically this operation can be done using the Convolution integral (denoted by * operator).</p>
+
+<br><p><img src="../control_theory_images/imp6.png" width="400" class="bigimg"></p><br>
+
+<p class="marg">That's hard! Fortunately the convolution integral corresponds to simple multiplication in the Laplace domain.</p>
+
+<br><p><img src="../control_theory_images/imp7.png" width="200" class="bigimg"></p><br>
+
+<p class="marg">Where H(s) is the Unit Impulse response in the Laplace domain, which by the way is the same as the Transfer function of the system.</p>
+
+<br>
+<br>
+
+</body>
+</html>
