@@ -1,0 +1,102 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/cs_representation.html">Representation</a><br>
+<b> Next:</b> <a href="../control_theory_blog/time_response.html">Time Response</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Mason's Gain Formula</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+<p class="marg">If the block diagram is an extremely complicated one, it's simply not practical to find the transfer function using block reduction technique. Instead the transfer function of a block diagram can be obtained directly by using the Mason’s Gain formula. Although the Mason’s Gain formula was first developed as a method to solve signal flow graphs, it can be used with Block diagrams as well.</p>
+
+<p class="marg">Before you use the Mason's gain formula you need to be familiar with a few terms:</p>
+
+<ol>
+
+<li><p class="marg"><b>Forward Path:</b> is a path from the input node to the output node. In the example shown below, there are 2 forward paths.</p>
+
+	<br><p><img src="../control_theory_images/mason1.png" width="400" class="bigimg"></p>
+
+	<br><p><img src="../control_theory_images/mason2.png" width="400" class="bigimg"></p><br>
+
+
+<p class="marg">The forward path gain can be obtained by simply multiplying all the transfer functions along the path.</p></li>
+
+<li><p class="marg"><b>Loop:</b> A loop is a path which originates from a node and terminates at the same node, without passing through any node twice. There are three loops in our example.</p>
+
+	<br><p><img src="../control_theory_images/mason3.png" width="400" class="bigimg"></p>
+
+	<br><p><img src="../control_theory_images/mason4.png" width="400" class="bigimg"></p>
+
+	<br><p><img src="../control_theory_images/mason5.png" width="400" class="bigimg"></p><br>
+
+<p class="marg">Loops that contain only one node are called self-loops. The loop gains can be obtained by multiplying the transfer functions of all the branches in the loop.</p></li>
+
+<li><p class="marg"><b>Non touching Loops:</b> Loops that do not share a node are called non touching loops. There are no non touching loops in our example.</p>
+
+<p class="marg">Loops that contain only one node are called self-loops. The loop gains can be obtained by multiplying the transfer functions of all the branches in the loop.</p></li>
+
+</ol>
+
+<p class="marg">The first step in using the Mason’s gain formula is to identify all the possible forward paths and loops in the system. Then calculate the forward path gains and the loop gains for all the identified forward paths and loops. Denote the forward path gains as P1, P2, P3 etc. and the loop gains as L1, L2, L3 etc.</p>
+
+<p class="marg">The next step is to identify the non-touching loops (if there are any) and then calculate the gain product of all possible combinations of two non-touching loops.</p>
+
+
+<p class="marg">Then the overall gain can be calculated using the Mason's Gain Formula as,</p>
+
+<br><p><img src="../control_theory_images/mason6.png" width="500" class="bigimg"></p><br>
+
+<p class="marg">In our example, the overall gain can be calculated as following,</p>
+
+<br><p><img src="../control_theory_images/mason7.png" width="500" class="bigimg"></p><br>
+
+<p class="marg">As evident from the above example, the Mason's Gain Formula is a far easier method to find the overall transfer function of a system. All there is to do is to identify the forward paths and loops correctly.</p>
+
+<br>
+<br>
+
+</body>
+</html>
