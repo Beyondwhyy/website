@@ -94,3 +94,17 @@ div.desc {
 .linespace {
   line-height: 1.5;
 }
+
+
+#leftbox { 
+                float:left;   
+                width:60%; 
+                height:280px; 
+            } 
+
+#rightbox{ 
+                float:left;  
+                width:40%; 
+                height:280px;
+            } 
+            
