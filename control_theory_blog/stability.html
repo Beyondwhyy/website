@@ -1,0 +1,81 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/second_order_systems.html">Second Order Systems</a><br>
+<b> Next:</b> <a href="../control_theory_blog/stability.html">Stability</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Stability</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+
+<p class="marg">A system is said to be stable, if it does not exhibit large changes in its output for a small change in its input. An unstable system is of no practical use and hence effort much be taken in ensuring stability.</p>
+
+<p class="marg">To determine the stability of a Control system, the concept of BIBO stability is used. BIBO stability stands for <b>bounded input, bounded output stability</b>. A BIBO stable yields a bounded output for a bounded input. This is to say that as long as we input a signal with an absolute value less than some constant, we are guaranteed to have an output with absolute value less than some other constant.</p>
+
+<p class="marg">A bounded signal is any signal that does not tend to infinity at no point in time, including the end behavior. The Unit impulse is the bounded signal of choice to determine the stability of a system.</p>
+
+<br><p><img src="../control_theory_images/stability1.png" width="600" class="bigimg"></p><br>
+
+<p class="marg">Mathematically, a system is said to be BIBO stable if,</p>
+
+<br><p><img src="../control_theory_images/stability2.png" width="200" class="bigimg"></p><br>
+
+<p class="marg">Where h(t) is the Unit impulse response.</p>
+
+<p class="marg">Although stability can be determined this way. It is much easier to infer the stability of the system from the pole zero plot of the transfer function. <b>For stable systems, all closed loop poles must be to the left of the imaginary axis.</b></p>
+
+<p class="marg">Consider the following example</p>
+
+<br><p><img src="../control_theory_images/stability3.png" width="500" class="bigimg"></p><br>
+
+<p class="marg">Here the pole at <b>s=2</b> corresponds to the term <b>e<sup>2t</sup></b> in the step response. As t→∞, this term tends to ∞, not allowing the response to settle down to a steady state value, making the system unstable. If any of the poles of the system lies on the imaginary axis, then the system is said to be marginally stable, meaning the response will keep on oscillating without either settling down or tending to infinity.</p>
+
+
+<br>
+<br>
+
+</body>
+</html>
