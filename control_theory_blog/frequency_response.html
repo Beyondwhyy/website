@@ -1,0 +1,76 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../control_theory_blog/stability.html">Stability</a><br>
+<b> Next:</b> <a></a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>Frequency Response</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+
+
+<p class="marg">When a sinusoidal input is applied to an LTI system, the output will also be an LTI system. The only things that may change are the Amplitude and Phase of the applied signal. This property is known as Sinusoidal fidelity. In fact, this property is used to determine whether a system is LTI or not practically.</p>
+
+<br><p><img src="../control_theory_images/fr1.png" width="500" class="bigimg"></p><br>
+
+<p class="marg">The key inference to be made from this property is that, both the input and the output signals will have the same frequency components (Refer <a href="../engmath_blog/fourier_series.html">Fourier series</a>) i.e. No frequency components can be manufactured other than the one's already present in the input signal (ideally). </p>
+
+<p class="marg">This means that any LTI can be completely described by how it changes the amplitude and phase of sinusoids passing through it. This information is called the system's Frequency response. Just like the time domain transfer function, we can define a transfer function in the frequency domain. The sinusoidal transfer function G(jω) is a complex quantity and can be represented as a magnitude and phase angle with frequency ω being the variable parameter.</p> 
+
+<p class="marg">The frequency domain transfer function of an LTI system can be obtained by substituting jω for ‘s’ in the time domain transfer function G(s) of the system.</p>
+
+<br><p><img src="../control_theory_images/fr2.png" width="250" class="bigimg"></p><br>
+
+<h3 align="CENTER">Magnitude of output = Magnitude of input × |G(jω)|</h3>
+<h3 align="CENTER">Phase difference ɸ = ∠ G(jω)</h3>
+
+<p class="marg">So to obtain the frequency response means to sketch the variation in magnitude and phase angle of G(jω), as ω is varied from 0 to infinity . Many methods like Bode plot, Nyquist plot, Polar plot and M-ɸ  plot are used to sketch the frequency response of control systems.</p>
+
+
+<br>
+<br>
+
+</body>
+</html>
