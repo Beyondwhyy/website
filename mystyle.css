@@ -126,7 +126,41 @@ div.desc {
   font-size: 1.4em;
 }
 
+.fsize3 {
+  font-size: 3vw;
+}
+
 
 .color1 {
   color: red;
 }
+
+
+#leftbox1 { 
+                float:left;   
+                width:40%; 
+                height:280px; 
+            } 
+
+#rightbox1{ 
+                float:left;  
+                width:60%; 
+                height:280px;
+            } 
+
+li.list1 {
+  list-style:none;
+}
+
+li.list2:before {
+   content:"\00BB";
+   font-size: 40px;
+   font-family: FreeMono, monospace
+}
+
+li.list3:before {
+   content:"\00BB";
+   font-size: 30px;
+   font-family: FreeMono, monospace
+}
+
