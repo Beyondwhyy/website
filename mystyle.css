@@ -108,3 +108,7 @@ div.desc {
                 height:280px;
             } 
             
+
+.monospace {
+  font-family: FreeMono, monospace
+}
