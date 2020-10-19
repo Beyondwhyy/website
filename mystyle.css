@@ -116,3 +116,17 @@ div.desc {
 .monospace {
   font-family: FreeMono, monospace
 }
+
+
+.fsize1 {
+  font-size: 4em;
+}
+
+.fsize2 {
+  font-size: 1.4em;
+}
+
+
+.color1 {
+  color: red;
+}
