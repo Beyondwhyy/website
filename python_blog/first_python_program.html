@@ -1,0 +1,219 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../mystyle.css">
+	<link rel="icon" href="../site_images/siteidentity.png">
+
+
+<b> Previous:</b> <a href="../python_blog/intro_to_python.html">Introduction to Python</a><br>
+<b> Next:</b> <a href="../python_blog/python_numbers.html">Numbers</a>
+<br>
+
+</head>
+<body>
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="../site_images/logo.png" class="logo">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<p class="align2"><font face="cinzel" size="4">
+			<a href="https://beyondwhy.site">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/blog.html">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/ebooks.html">EBOOKS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../pages/shop.html">SHOP</a>
+			</font></p>
+
+<br>&nbsp;
+<br>&nbsp;
+
+<p>
+<font size="-1"></font>
+</p><div align="CENTER"><font size="-1"><font size="+1"><small><big><font size="+5"><b>First Python Program</b></font>
+<br>
+<br>&nbsp;
+<br>&nbsp;
+<hr style="width:70%">
+
+</big></small></font></font></div><font size="-1"></font>
+<p>
+</p>
+<a name="CHILD_LINKS"></a>
+
+<br>&nbsp;
+<br>&nbsp;
+<font size="4" >
+
+<p class="marg">When you start Python from the terminal, what you get is an interactive mode where you can experiment. If you start typing statements, they will run immediately. There is no edit/compile/run/debug cycle.</p>
+
+<br><p><img src="../python_images/python2.png" width="700" class="bigimg"></p><br>
+
+<br>
+<h2><ul><li>Creating Programs</li></ul></h2>
+
+<p class="marg">In scripting mode python programs are put in <b>.py</b> files. You can create these files with any text editor of your choice, notepad, sublime text or any other.</p>
+
+<br>
+<h2><ul><li>Running Programs</li></ul></h2>
+
+<p class="marg">To run a python program you need to specify the file name (ex hello.py) and specify a full path to the Python interpreter if the file is not saved in the default folder.</p>
+
+
+<br>
+<h2><ul><li>A Sample Program</li></ul></h2>
+
+<p class="marg">Let’s solve the following problem:
+
+<i>We want to make an application that outputs the sum of any 2 no.'s.</i>
+
+Here's the solution:</p>
+
+<p class="codeblock marg"><i># This program adds two numbers</i><br>
+num1 = input('Enter first number: ')<br>
+num2 = input('Enter second number: ')<br><br>
+
+<i># Add two numbers</i><br>
+sum = float(num1) + float(num2)<br><br>
+
+<i># Display the sum</i><br>
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))</p>
+
+<p class="marg">Save this file as <b>sum.py</b></p>
+
+
+<p class="marg">Output:</p>
+
+<p class="codeblock marg">Enter first number: 1.5<br>
+Enter second number: 6.3<br>
+The sum of 1.5 and 6.3 is 7.8</p>
+
+<p class="marg">Using this program as a guide, you can learn a number of important core concepts about Python.</p>
+
+<ol>
+<br>
+<h3><li>Statements</li></h3>
+
+<p class="marg">A python program is a sequence of statements:</p>
+
+<p class="codeblock">a = 3 + 4<br>
+b = a * 2<br>
+print(b)</p>
+
+<p class="marg">Each statement is terminated by a newline. Statements are executed one after the other until control reaches the end of the file.</p>
+
+<br>
+<h3><li>Comments</li></h3>
+
+<p class="marg">Comments are portions of the code that will not be executed. They are used to make the program more legible for a programmer and anyone else who may use this code</p>
+
+<p class="codeblock"><i>#This is a comment<br>
+#This is also a comment<br>
+#a = b+2 this too is a comment</i></p>
+
+<p class="marg">Comments are denoted by # and extend to the end of the line.</p>
+
+<br>
+<h3><li>Variables</li></h3>
+
+<p class="marg">A variable is a name used to store a value. You can use letters (lower and upper-case) from a to z. As well as the character underscore _. Numbers can also be part of the name of a variable, except as the first character.</p>
+
+<p class="codeblock">height = 6<br>
+a = 1<br>
+max_value = 10 <br>
+<i>#All these are examples of variables</i></p>
+
+<br>
+<h3><li>Types</li></h3>
+
+<p class="marg">In python variables needn't be declared with a type. The type is automatically associated with the kind of value on the right hand side.</p>
+
+<p class="codeblock">height = 442 <i>#An integer</i><br>
+height = 442.5 <i>#Floating point</i><br>
+height = 'Really tall' <i>#A string</i></p>
+
+<p class="marg">The perceived “type” of a variable might change as a program executes depending on the current value assigned to it.</p>
+
+<br>
+<h3><li>Case Sensitivity</li></h3>
+
+<p class="marg">Python is case sensitive. Upper and lower-case letters are considered different letters. These are all different variables:</p>
+
+<p class="codeblock">name = 'Jake'<br>
+Name = 'Elwood'<br>
+NAME = 'Guido'</p>
+
+<br>
+<h3><li>Conditionals</li></h3>
+
+<p class="marg">The if statement is used to execute a conditional:</p>
+
+<p class="codeblock">if a > b:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; print('Computer says no')<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; print('Computer says yes')</p>
+
+<p class="marg">You can check for multiple conditions by adding extra checks using elif.</p>
+
+<p class="codeblock">if a > b:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; print('Computer says no')<br>
+elif a==b:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; print('Computer says yes')<br>
+else:<br>
+print('Computer says maybe')</p>
+
+
+<br>
+<h3><li>Print fucntion</li></h3>
+
+<p class="marg">The print function produces a single line of text with the values passed.</p>
+
+<p class="codeblock">print('Hello world!') <i>#Prints the text 'Hello world!'</i></p>
+
+<p class="marg">You can use variables. The text printed will be the value of the variable, not the name.</p>
+
+<p class="codeblock">x = 100<br>
+	print(x) <i>#Prints the text '100'</i></p>
+
+<p class="marg">If you pass more than one value to print they are separated by spaces.</p>
+
+<p class="codeblock">name = 'Jake'<br>
+	print('My name is', name) <i>#Print the text 'My name is Jake'</i></p>
+
+<p class="marg">By default print() function puts a newline at the end.</p>
+
+
+<br>
+<h3><li>Looping</li></h3>
+
+<p class="marg">The if statement is used to execute a conditional:</p>
+
+<p class="codeblock">while a < 10:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a = a+1</p>
+
+<p class="marg">You can check for multiple conditions by adding extra checks using elif.</p>
+
+<br>
+<h3><li>Indentation</li></h3>
+
+<p class="marg">The if statement is used to execute a conditional:</p>
+
+<p class="codeblock">while a < 10:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a = a+1</p>
+
+<p class="marg">You can check for multiple conditions by adding extra checks using elif.</p>
+
+
+</ol>
+
+<br>
+<br>
+
+</body>
+</html>
